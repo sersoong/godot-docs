@@ -19,33 +19,44 @@ Input event type for actions.
 Member Functions
 ----------------
 
-+------------------------------+-------------------------------------------------------------------------------------------------------+
-| :ref:`String<class_string>`  | :ref:`get_action<class_InputEventAction_get_action>`  **(** **)** const                               |
-+------------------------------+-------------------------------------------------------------------------------------------------------+
-| void                         | :ref:`set_action<class_InputEventAction_set_action>`  **(** :ref:`String<class_string>` action  **)** |
-+------------------------------+-------------------------------------------------------------------------------------------------------+
-| void                         | :ref:`set_pressed<class_InputEventAction_set_pressed>`  **(** :ref:`bool<class_bool>` pressed  **)**  |
-+------------------------------+-------------------------------------------------------------------------------------------------------+
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| :ref:`String<class_string>`  | :ref:`get_action<class_InputEventAction_get_action>` **(** **)** const                              |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| void                         | :ref:`set_action<class_InputEventAction_set_action>` **(** :ref:`String<class_string>` action **)** |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| void                         | :ref:`set_pressed<class_InputEventAction_set_pressed>` **(** :ref:`bool<class_bool>` pressed **)**  |
++------------------------------+-----------------------------------------------------------------------------------------------------+
 
 Member Variables
 ----------------
 
-- :ref:`String<class_string>` **action**
-- :ref:`bool<class_bool>` **pressed**
+  .. _class_InputEventAction_action:
+
+- :ref:`String<class_string>` **action** - The action's name. Actions are accessed via this :ref:`String<class_string>`.
+
+  .. _class_InputEventAction_pressed:
+
+- :ref:`bool<class_bool>` **pressed** - If ``true`` the action's state is pressed. If ``false`` the action's state is released.
+
+
+Description
+-----------
+
+Contains a generic action which can be targeted from several type of inputs. Actions can be created from the project settings menu ``Project > Project Settings > Input Map[/Code]. See [method Node._input].
 
 Member Function Description
 ---------------------------
 
 .. _class_InputEventAction_get_action:
 
-- :ref:`String<class_string>`  **get_action**  **(** **)** const
+- :ref:`String<class_string>` **get_action** **(** **)** const
 
 .. _class_InputEventAction_set_action:
 
-- void  **set_action**  **(** :ref:`String<class_string>` action  **)**
+- void **set_action** **(** :ref:`String<class_string>` action **)**
 
 .. _class_InputEventAction_set_pressed:
 
-- void  **set_pressed**  **(** :ref:`bool<class_bool>` pressed  **)**
+- void **set_pressed** **(** :ref:`bool<class_bool>` pressed **)**
 
 

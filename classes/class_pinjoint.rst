@@ -14,40 +14,62 @@ PinJoint
 Brief Description
 -----------------
 
-
+Pin Joint for 3D Shapes.
 
 Member Functions
 ----------------
 
-+----------------------------+-----------------------------------------------------------------------------------------------------------------------+
-| :ref:`float<class_float>`  | :ref:`get_param<class_PinJoint_get_param>`  **(** :ref:`int<class_int>` param  **)** const                            |
-+----------------------------+-----------------------------------------------------------------------------------------------------------------------+
-| void                       | :ref:`set_param<class_PinJoint_set_param>`  **(** :ref:`int<class_int>` param, :ref:`float<class_float>` value  **)** |
-+----------------------------+-----------------------------------------------------------------------------------------------------------------------+
++----------------------------+---------------------------------------------------------------------------------------------------------------------+
+| :ref:`float<class_float>`  | :ref:`get_param<class_PinJoint_get_param>` **(** :ref:`int<class_int>` param **)** const                            |
++----------------------------+---------------------------------------------------------------------------------------------------------------------+
+| void                       | :ref:`set_param<class_PinJoint_set_param>` **(** :ref:`int<class_int>` param, :ref:`float<class_float>` value **)** |
++----------------------------+---------------------------------------------------------------------------------------------------------------------+
 
 Member Variables
 ----------------
 
-- :ref:`float<class_float>` **params/bias**
-- :ref:`float<class_float>` **params/damping**
-- :ref:`float<class_float>` **params/impulse_clamp**
+  .. _class_PinJoint_params/bias:
+
+- :ref:`float<class_float>` **params/bias** - The force with wich the pinned objects stay in positional relation to each other.
+
+The higher, the stronger.
+
+  .. _class_PinJoint_params/damping:
+
+- :ref:`float<class_float>` **params/damping** - The force with wich the pinned objects stay in velocity relation to each other.
+
+The higher, the stronger.
+
+  .. _class_PinJoint_params/impulse_clamp:
+
+- :ref:`float<class_float>` **params/impulse_clamp** - If above 0, this value is the maximum value for an impulse that this Joint produces.
+
 
 Numeric Constants
 -----------------
 
-- **PARAM_BIAS** = **0**
-- **PARAM_DAMPING** = **1**
-- **PARAM_IMPULSE_CLAMP** = **2**
+- **PARAM_BIAS** = **0** --- The force with wich the pinned objects stay in positional relation to each other.
+
+The higher, the stronger.
+- **PARAM_DAMPING** = **1** --- The force with wich the pinned objects stay in velocity relation to each other.
+
+The higher, the stronger.
+- **PARAM_IMPULSE_CLAMP** = **2** --- If above 0, this value is the maximum value for an impulse that this Joint produces.
+
+Description
+-----------
+
+Pin Joint for 3D Rigid Bodies. It pins 2 bodies (rigid or static) together.
 
 Member Function Description
 ---------------------------
 
 .. _class_PinJoint_get_param:
 
-- :ref:`float<class_float>`  **get_param**  **(** :ref:`int<class_int>` param  **)** const
+- :ref:`float<class_float>` **get_param** **(** :ref:`int<class_int>` param **)** const
 
 .. _class_PinJoint_set_param:
 
-- void  **set_param**  **(** :ref:`int<class_int>` param, :ref:`float<class_float>` value  **)**
+- void **set_param** **(** :ref:`int<class_int>` param, :ref:`float<class_float>` value **)**
 
 

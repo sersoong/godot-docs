@@ -14,83 +14,105 @@ AudioEffectPhaser
 Brief Description
 -----------------
 
+Adds a Phaser audio effect to an Audio bus.
 
+Combines the original signal with a copy that is slightly out of phase with the original.
 
 Member Functions
 ----------------
 
-+----------------------------+--------------------------------------------------------------------------------------------------------------+
-| :ref:`float<class_float>`  | :ref:`get_depth<class_AudioEffectPhaser_get_depth>`  **(** **)** const                                       |
-+----------------------------+--------------------------------------------------------------------------------------------------------------+
-| :ref:`float<class_float>`  | :ref:`get_feedback<class_AudioEffectPhaser_get_feedback>`  **(** **)** const                                 |
-+----------------------------+--------------------------------------------------------------------------------------------------------------+
-| :ref:`float<class_float>`  | :ref:`get_range_max_hz<class_AudioEffectPhaser_get_range_max_hz>`  **(** **)** const                         |
-+----------------------------+--------------------------------------------------------------------------------------------------------------+
-| :ref:`float<class_float>`  | :ref:`get_range_min_hz<class_AudioEffectPhaser_get_range_min_hz>`  **(** **)** const                         |
-+----------------------------+--------------------------------------------------------------------------------------------------------------+
-| :ref:`float<class_float>`  | :ref:`get_rate_hz<class_AudioEffectPhaser_get_rate_hz>`  **(** **)** const                                   |
-+----------------------------+--------------------------------------------------------------------------------------------------------------+
-| void                       | :ref:`set_depth<class_AudioEffectPhaser_set_depth>`  **(** :ref:`float<class_float>` depth  **)**            |
-+----------------------------+--------------------------------------------------------------------------------------------------------------+
-| void                       | :ref:`set_feedback<class_AudioEffectPhaser_set_feedback>`  **(** :ref:`float<class_float>` fbk  **)**        |
-+----------------------------+--------------------------------------------------------------------------------------------------------------+
-| void                       | :ref:`set_range_max_hz<class_AudioEffectPhaser_set_range_max_hz>`  **(** :ref:`float<class_float>` hz  **)** |
-+----------------------------+--------------------------------------------------------------------------------------------------------------+
-| void                       | :ref:`set_range_min_hz<class_AudioEffectPhaser_set_range_min_hz>`  **(** :ref:`float<class_float>` hz  **)** |
-+----------------------------+--------------------------------------------------------------------------------------------------------------+
-| void                       | :ref:`set_rate_hz<class_AudioEffectPhaser_set_rate_hz>`  **(** :ref:`float<class_float>` hz  **)**           |
-+----------------------------+--------------------------------------------------------------------------------------------------------------+
++----------------------------+------------------------------------------------------------------------------------------------------------+
+| :ref:`float<class_float>`  | :ref:`get_depth<class_AudioEffectPhaser_get_depth>` **(** **)** const                                      |
++----------------------------+------------------------------------------------------------------------------------------------------------+
+| :ref:`float<class_float>`  | :ref:`get_feedback<class_AudioEffectPhaser_get_feedback>` **(** **)** const                                |
++----------------------------+------------------------------------------------------------------------------------------------------------+
+| :ref:`float<class_float>`  | :ref:`get_range_max_hz<class_AudioEffectPhaser_get_range_max_hz>` **(** **)** const                        |
++----------------------------+------------------------------------------------------------------------------------------------------------+
+| :ref:`float<class_float>`  | :ref:`get_range_min_hz<class_AudioEffectPhaser_get_range_min_hz>` **(** **)** const                        |
++----------------------------+------------------------------------------------------------------------------------------------------------+
+| :ref:`float<class_float>`  | :ref:`get_rate_hz<class_AudioEffectPhaser_get_rate_hz>` **(** **)** const                                  |
++----------------------------+------------------------------------------------------------------------------------------------------------+
+| void                       | :ref:`set_depth<class_AudioEffectPhaser_set_depth>` **(** :ref:`float<class_float>` depth **)**            |
++----------------------------+------------------------------------------------------------------------------------------------------------+
+| void                       | :ref:`set_feedback<class_AudioEffectPhaser_set_feedback>` **(** :ref:`float<class_float>` fbk **)**        |
++----------------------------+------------------------------------------------------------------------------------------------------------+
+| void                       | :ref:`set_range_max_hz<class_AudioEffectPhaser_set_range_max_hz>` **(** :ref:`float<class_float>` hz **)** |
++----------------------------+------------------------------------------------------------------------------------------------------------+
+| void                       | :ref:`set_range_min_hz<class_AudioEffectPhaser_set_range_min_hz>` **(** :ref:`float<class_float>` hz **)** |
++----------------------------+------------------------------------------------------------------------------------------------------------+
+| void                       | :ref:`set_rate_hz<class_AudioEffectPhaser_set_rate_hz>` **(** :ref:`float<class_float>` hz **)**           |
++----------------------------+------------------------------------------------------------------------------------------------------------+
 
 Member Variables
 ----------------
 
-- :ref:`float<class_float>` **depth**
-- :ref:`float<class_float>` **feedback**
-- :ref:`float<class_float>` **range_max_hz**
-- :ref:`float<class_float>` **range_min_hz**
-- :ref:`float<class_float>` **rate_hz**
+  .. _class_AudioEffectPhaser_depth:
+
+- :ref:`float<class_float>` **depth** - Governs how high the filter frequencies sweep. Low value will primarily affect bass frequencies. High value can sweep high into the treble. Value can range from 0.1 to 4. Default value: ``1``.
+
+  .. _class_AudioEffectPhaser_feedback:
+
+- :ref:`float<class_float>` **feedback** - Output percent of modified sound. Value can range from 0.1 to 0.9. Default value: ``0.7``.
+
+  .. _class_AudioEffectPhaser_range_max_hz:
+
+- :ref:`float<class_float>` **range_max_hz** - Determines the maximum frequency affected by the LFO modulations. Value can range from 10 to 10000. Default value: ``1600hz``.
+
+  .. _class_AudioEffectPhaser_range_min_hz:
+
+- :ref:`float<class_float>` **range_min_hz** - Determines the minimum frequency affected by the LFO modulations. Value can range from 10 to 10000. Default value: ``440hz``.
+
+  .. _class_AudioEffectPhaser_rate_hz:
+
+- :ref:`float<class_float>` **rate_hz** - Adjusts the rate at which the effect sweeps up and down across the frequency range.
+
+
+Description
+-----------
+
+Combines phase-shifted signals with the original signal. The movement of the phase-shifted signals is controlled using a Low Frequency Oscillator.
 
 Member Function Description
 ---------------------------
 
 .. _class_AudioEffectPhaser_get_depth:
 
-- :ref:`float<class_float>`  **get_depth**  **(** **)** const
+- :ref:`float<class_float>` **get_depth** **(** **)** const
 
 .. _class_AudioEffectPhaser_get_feedback:
 
-- :ref:`float<class_float>`  **get_feedback**  **(** **)** const
+- :ref:`float<class_float>` **get_feedback** **(** **)** const
 
 .. _class_AudioEffectPhaser_get_range_max_hz:
 
-- :ref:`float<class_float>`  **get_range_max_hz**  **(** **)** const
+- :ref:`float<class_float>` **get_range_max_hz** **(** **)** const
 
 .. _class_AudioEffectPhaser_get_range_min_hz:
 
-- :ref:`float<class_float>`  **get_range_min_hz**  **(** **)** const
+- :ref:`float<class_float>` **get_range_min_hz** **(** **)** const
 
 .. _class_AudioEffectPhaser_get_rate_hz:
 
-- :ref:`float<class_float>`  **get_rate_hz**  **(** **)** const
+- :ref:`float<class_float>` **get_rate_hz** **(** **)** const
 
 .. _class_AudioEffectPhaser_set_depth:
 
-- void  **set_depth**  **(** :ref:`float<class_float>` depth  **)**
+- void **set_depth** **(** :ref:`float<class_float>` depth **)**
 
 .. _class_AudioEffectPhaser_set_feedback:
 
-- void  **set_feedback**  **(** :ref:`float<class_float>` fbk  **)**
+- void **set_feedback** **(** :ref:`float<class_float>` fbk **)**
 
 .. _class_AudioEffectPhaser_set_range_max_hz:
 
-- void  **set_range_max_hz**  **(** :ref:`float<class_float>` hz  **)**
+- void **set_range_max_hz** **(** :ref:`float<class_float>` hz **)**
 
 .. _class_AudioEffectPhaser_set_range_min_hz:
 
-- void  **set_range_min_hz**  **(** :ref:`float<class_float>` hz  **)**
+- void **set_range_min_hz** **(** :ref:`float<class_float>` hz **)**
 
 .. _class_AudioEffectPhaser_set_rate_hz:
 
-- void  **set_rate_hz**  **(** :ref:`float<class_float>` hz  **)**
+- void **set_rate_hz** **(** :ref:`float<class_float>` hz **)**
 
 

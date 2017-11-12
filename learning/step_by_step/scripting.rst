@@ -34,11 +34,10 @@ to the high integration with Godot:
 * The editor integration is a pleasure to work with, with code completion expanding as far as completing nodes, signals, and many other items pertaining to the current scene being edited.
 * Has vector types built-in (such as Vectors, transorms etc), making it efficient for heavy linear algebra.
 * It supports multiple threads as well as statically typed languages (which is one of the limitation that avoided us going for other VMs such as Lua, Squirrel, etc).
-* It uses no garbage collector, so it trades a small bit of automation (most
-objects are reference counted anyway), by determinism.
+* It uses no garbage collector, so it trades a small bit of automation (most objects are reference counted anyway), by determinism.
 * The dynamic nature of it makes it easy to optimize chunks of it in C++ (via GDNative) if more performance is required at some point, without recompiling the engine.
 
-If undecided, and have experience in programming (specially dynamically
+If undecided, and have experience in programming (especially dynamically
 typed languages), go for GDScript!
 
 Visual Script
@@ -115,12 +114,12 @@ nodes:
 
 It should look like this in the scene tree:
 
-.. image:: /img/scripting_scene_tree.png
+.. image:: img/scripting_scene_tree.png
 
 Use the 2D editor to position and resize the button and label so that they
 look like the image below. You can set the text in the Inspector pane.
 
-.. image:: /img/label_button_example.png
+.. image:: img/label_button_example.png
 
 Finally, save the scene, with a name such as "sayhello.tscn"
 
@@ -129,10 +128,10 @@ Finally, save the scene, with a name such as "sayhello.tscn"
 Adding a script
 ~~~~~~~~~~~~~~~
 
-Right click on the panel node, and then select "Add Script" in the context
+Right click on the panel node, and then select "Attach Script" in the context
 menu:
 
-.. image:: /img/add_script.png
+.. image:: img/add_script.png
 
 The script creation dialog will pop up. This dialog allows you to set the
 language, class name, and other relevant options.
@@ -146,17 +145,17 @@ script's goal is to extend this panel node's functionality.
 
 Finally, enter a path name for the script and select "Create":
 
-.. image:: /img/script_create.png
+.. image:: img/script_create.png
 
 Once this is done, the script will be created and added to the node. You can
 see this both as an extra icon in the node as well as in the script property:
 
-.. image:: /img/script_added.png
+.. image:: img/script_added.png
 
 To edit the script, select either of the highlighted buttons. This will bring
 you to the script editor where an existing template will be included by default:
 
-.. image:: /img/script_template.png
+.. image:: img/script_template.png
 
 There is not much in there. The "_ready()" function is called when the
 node (and all its children) enter the active scene. (Note: "_ready()" is not
@@ -186,7 +185,7 @@ The editor provides an interface for connecting signals to your scripts. You
 can access this by selecting the node in the scene tree and then selecting the
 "Node" tab. Next, make sure that you have "Signals" selected.
 
-.. image:: /img/signals.png
+.. image:: img/signals.png
 
 At this point, you could use the visual interface to hook up the "pressed"
 signal by double clicking on it and selecting a target node that already has a
@@ -219,7 +218,7 @@ Next, write a function which will be called when the button is pressed:
 
  .. group-tab:: VS
 
-    .. image:: /img/signals.png
+    .. image:: img/signals.png
 
 Finally, connect the button's "pressed" signal to that callback in _ready(), by
 using :ref:`Object.connect() <class_Object_connect>`.
@@ -243,7 +242,7 @@ The final script should look basically like this:
 
 Run the scene and press the button. You should get the following result:
 
-.. image:: /img/scripting_hello.png
+.. image:: img/scripting_hello.png
 
 Why hello there! Congratulations on scripting your first scene.
 

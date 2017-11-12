@@ -11,7 +11,7 @@ are, as they name implies, rectangles where the world is drawn. They
 have three main uses, but can flexibly adapted to a lot more. All this
 is done via the :ref:`Viewport <class_Viewport>` node.
 
-.. image:: /img/viewportnode.png
+.. image:: img/viewportnode.png
 
 The main uses in question are:
 
@@ -102,7 +102,7 @@ use the same as a parent viewport (root viewport does contain one
 though, which is the one objects are rendered to by default). A world can
 be set in a viewport using the "world" property, and that will separate
 all children nodes of that viewport from interacting with the parent
-viewport world. This is specially useful in scenarios where, for
+viewport world. This is especially useful in scenarios where, for
 example, you might want to show a separate character in 3D imposed over
 the game (like in Starcraft).
 
@@ -149,7 +149,7 @@ display anything it has inside. The layout is something like this:
 
 The viewport will cover the area of its parent control completely.
 
-.. image:: /img/subviewport.png
+.. image:: img/subviewport.png
 
 Render target
 -------------

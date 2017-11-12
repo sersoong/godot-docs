@@ -19,36 +19,51 @@ Class representing a prism-shaped :ref:`PrimitiveMesh<class_primitivemesh>`.
 Member Functions
 ----------------
 
-+--------------------------------+-------------------------------------------------------------------------------------------------------------------+
-| :ref:`float<class_float>`      | :ref:`get_left_to_right<class_PrismMesh_get_left_to_right>`  **(** **)** const                                    |
-+--------------------------------+-------------------------------------------------------------------------------------------------------------------+
-| :ref:`Vector3<class_vector3>`  | :ref:`get_size<class_PrismMesh_get_size>`  **(** **)** const                                                      |
-+--------------------------------+-------------------------------------------------------------------------------------------------------------------+
-| :ref:`int<class_int>`          | :ref:`get_subdivide_depth<class_PrismMesh_get_subdivide_depth>`  **(** **)** const                                |
-+--------------------------------+-------------------------------------------------------------------------------------------------------------------+
-| :ref:`int<class_int>`          | :ref:`get_subdivide_height<class_PrismMesh_get_subdivide_height>`  **(** **)** const                              |
-+--------------------------------+-------------------------------------------------------------------------------------------------------------------+
-| :ref:`int<class_int>`          | :ref:`get_subdivide_width<class_PrismMesh_get_subdivide_width>`  **(** **)** const                                |
-+--------------------------------+-------------------------------------------------------------------------------------------------------------------+
-| void                           | :ref:`set_left_to_right<class_PrismMesh_set_left_to_right>`  **(** :ref:`float<class_float>` left_to_right  **)** |
-+--------------------------------+-------------------------------------------------------------------------------------------------------------------+
-| void                           | :ref:`set_size<class_PrismMesh_set_size>`  **(** :ref:`Vector3<class_vector3>` size  **)**                        |
-+--------------------------------+-------------------------------------------------------------------------------------------------------------------+
-| void                           | :ref:`set_subdivide_depth<class_PrismMesh_set_subdivide_depth>`  **(** :ref:`int<class_int>` segments  **)**      |
-+--------------------------------+-------------------------------------------------------------------------------------------------------------------+
-| void                           | :ref:`set_subdivide_height<class_PrismMesh_set_subdivide_height>`  **(** :ref:`int<class_int>` segments  **)**    |
-+--------------------------------+-------------------------------------------------------------------------------------------------------------------+
-| void                           | :ref:`set_subdivide_width<class_PrismMesh_set_subdivide_width>`  **(** :ref:`int<class_int>` segments  **)**      |
-+--------------------------------+-------------------------------------------------------------------------------------------------------------------+
++--------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| :ref:`float<class_float>`      | :ref:`get_left_to_right<class_PrismMesh_get_left_to_right>` **(** **)** const                                   |
++--------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| :ref:`Vector3<class_vector3>`  | :ref:`get_size<class_PrismMesh_get_size>` **(** **)** const                                                     |
++--------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| :ref:`int<class_int>`          | :ref:`get_subdivide_depth<class_PrismMesh_get_subdivide_depth>` **(** **)** const                               |
++--------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| :ref:`int<class_int>`          | :ref:`get_subdivide_height<class_PrismMesh_get_subdivide_height>` **(** **)** const                             |
++--------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| :ref:`int<class_int>`          | :ref:`get_subdivide_width<class_PrismMesh_get_subdivide_width>` **(** **)** const                               |
++--------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| void                           | :ref:`set_left_to_right<class_PrismMesh_set_left_to_right>` **(** :ref:`float<class_float>` left_to_right **)** |
++--------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| void                           | :ref:`set_size<class_PrismMesh_set_size>` **(** :ref:`Vector3<class_vector3>` size **)**                        |
++--------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| void                           | :ref:`set_subdivide_depth<class_PrismMesh_set_subdivide_depth>` **(** :ref:`int<class_int>` segments **)**      |
++--------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| void                           | :ref:`set_subdivide_height<class_PrismMesh_set_subdivide_height>` **(** :ref:`int<class_int>` segments **)**    |
++--------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| void                           | :ref:`set_subdivide_width<class_PrismMesh_set_subdivide_width>` **(** :ref:`int<class_int>` segments **)**      |
++--------------------------------+-----------------------------------------------------------------------------------------------------------------+
 
 Member Variables
 ----------------
 
+  .. _class_PrismMesh_left_to_right:
+
 - :ref:`float<class_float>` **left_to_right** - Displacement of of the upper edge along the x-axis. 0.0 positions edge straight above the bottome left edge. Defaults to 0.5 (positioned on the midpoint).
+
+  .. _class_PrismMesh_size:
+
 - :ref:`Vector3<class_vector3>` **size** - Size of the prism. Defaults to (2.0, 2.0, 2.0).
+
+  .. _class_PrismMesh_subdivide_depth:
+
 - :ref:`int<class_int>` **subdivide_depth** - Number of added edge loops along the z-axis. Defaults to 0.
+
+  .. _class_PrismMesh_subdivide_height:
+
 - :ref:`int<class_int>` **subdivide_height** - Number of added edge loops along the y-axis. Defaults to 0.
+
+  .. _class_PrismMesh_subdivide_width:
+
 - :ref:`int<class_int>` **subdivide_width** - Number of added edge loops along the x-axis. Defaults to 0.
+
 
 Description
 -----------
@@ -60,42 +75,42 @@ Member Function Description
 
 .. _class_PrismMesh_get_left_to_right:
 
-- :ref:`float<class_float>`  **get_left_to_right**  **(** **)** const
+- :ref:`float<class_float>` **get_left_to_right** **(** **)** const
 
 .. _class_PrismMesh_get_size:
 
-- :ref:`Vector3<class_vector3>`  **get_size**  **(** **)** const
+- :ref:`Vector3<class_vector3>` **get_size** **(** **)** const
 
 .. _class_PrismMesh_get_subdivide_depth:
 
-- :ref:`int<class_int>`  **get_subdivide_depth**  **(** **)** const
+- :ref:`int<class_int>` **get_subdivide_depth** **(** **)** const
 
 .. _class_PrismMesh_get_subdivide_height:
 
-- :ref:`int<class_int>`  **get_subdivide_height**  **(** **)** const
+- :ref:`int<class_int>` **get_subdivide_height** **(** **)** const
 
 .. _class_PrismMesh_get_subdivide_width:
 
-- :ref:`int<class_int>`  **get_subdivide_width**  **(** **)** const
+- :ref:`int<class_int>` **get_subdivide_width** **(** **)** const
 
 .. _class_PrismMesh_set_left_to_right:
 
-- void  **set_left_to_right**  **(** :ref:`float<class_float>` left_to_right  **)**
+- void **set_left_to_right** **(** :ref:`float<class_float>` left_to_right **)**
 
 .. _class_PrismMesh_set_size:
 
-- void  **set_size**  **(** :ref:`Vector3<class_vector3>` size  **)**
+- void **set_size** **(** :ref:`Vector3<class_vector3>` size **)**
 
 .. _class_PrismMesh_set_subdivide_depth:
 
-- void  **set_subdivide_depth**  **(** :ref:`int<class_int>` segments  **)**
+- void **set_subdivide_depth** **(** :ref:`int<class_int>` segments **)**
 
 .. _class_PrismMesh_set_subdivide_height:
 
-- void  **set_subdivide_height**  **(** :ref:`int<class_int>` segments  **)**
+- void **set_subdivide_height** **(** :ref:`int<class_int>` segments **)**
 
 .. _class_PrismMesh_set_subdivide_width:
 
-- void  **set_subdivide_width**  **(** :ref:`int<class_int>` segments  **)**
+- void **set_subdivide_width** **(** :ref:`int<class_int>` segments **)**
 
 

@@ -14,44 +14,55 @@ InputEventJoypadMotion
 Brief Description
 -----------------
 
-Input event type for joypad motion/axis events.
+Input event type for gamepad joysticks and other motions. For buttons see ``InputEventJoypadMotion``.
 
 Member Functions
 ----------------
 
-+----------------------------+-----------------------------------------------------------------------------------------------------------------------+
-| :ref:`int<class_int>`      | :ref:`get_axis<class_InputEventJoypadMotion_get_axis>`  **(** **)** const                                             |
-+----------------------------+-----------------------------------------------------------------------------------------------------------------------+
-| :ref:`float<class_float>`  | :ref:`get_axis_value<class_InputEventJoypadMotion_get_axis_value>`  **(** **)** const                                 |
-+----------------------------+-----------------------------------------------------------------------------------------------------------------------+
-| void                       | :ref:`set_axis<class_InputEventJoypadMotion_set_axis>`  **(** :ref:`int<class_int>` axis  **)**                       |
-+----------------------------+-----------------------------------------------------------------------------------------------------------------------+
-| void                       | :ref:`set_axis_value<class_InputEventJoypadMotion_set_axis_value>`  **(** :ref:`float<class_float>` axis_value  **)** |
-+----------------------------+-----------------------------------------------------------------------------------------------------------------------+
++----------------------------+---------------------------------------------------------------------------------------------------------------------+
+| :ref:`int<class_int>`      | :ref:`get_axis<class_InputEventJoypadMotion_get_axis>` **(** **)** const                                            |
++----------------------------+---------------------------------------------------------------------------------------------------------------------+
+| :ref:`float<class_float>`  | :ref:`get_axis_value<class_InputEventJoypadMotion_get_axis_value>` **(** **)** const                                |
++----------------------------+---------------------------------------------------------------------------------------------------------------------+
+| void                       | :ref:`set_axis<class_InputEventJoypadMotion_set_axis>` **(** :ref:`int<class_int>` axis **)**                       |
++----------------------------+---------------------------------------------------------------------------------------------------------------------+
+| void                       | :ref:`set_axis_value<class_InputEventJoypadMotion_set_axis_value>` **(** :ref:`float<class_float>` axis_value **)** |
++----------------------------+---------------------------------------------------------------------------------------------------------------------+
 
 Member Variables
 ----------------
 
-- :ref:`int<class_int>` **axis** - Joypad axis identifier, one of the JOY_AXIS_* constants in [@Global Scope].
-- :ref:`float<class_float>` **axis_value** - Position of the axis, ranging from -1.0 to 1.0. A value of 0 means that the axis is in its neutral position.
+  .. _class_InputEventJoypadMotion_axis:
+
+- :ref:`int<class_int>` **axis** - Axis identifier. Use one of the ``JOY_AXIS\_\*`` constants in @global Scope.
+
+  .. _class_InputEventJoypadMotion_axis_value:
+
+- :ref:`float<class_float>` **axis_value** - Current position of the joystick on the given axis. The value ranges from ``-1.0`` to ``1.0``. A value of ``0`` means the axis is in its resting position.
+
+
+Description
+-----------
+
+Stores information about joystick motions. One ``InputEventJoypadMotion`` represents one axis at a time.
 
 Member Function Description
 ---------------------------
 
 .. _class_InputEventJoypadMotion_get_axis:
 
-- :ref:`int<class_int>`  **get_axis**  **(** **)** const
+- :ref:`int<class_int>` **get_axis** **(** **)** const
 
 .. _class_InputEventJoypadMotion_get_axis_value:
 
-- :ref:`float<class_float>`  **get_axis_value**  **(** **)** const
+- :ref:`float<class_float>` **get_axis_value** **(** **)** const
 
 .. _class_InputEventJoypadMotion_set_axis:
 
-- void  **set_axis**  **(** :ref:`int<class_int>` axis  **)**
+- void **set_axis** **(** :ref:`int<class_int>` axis **)**
 
 .. _class_InputEventJoypadMotion_set_axis_value:
 
-- void  **set_axis_value**  **(** :ref:`float<class_float>` axis_value  **)**
+- void **set_axis_value** **(** :ref:`float<class_float>` axis_value **)**
 
 

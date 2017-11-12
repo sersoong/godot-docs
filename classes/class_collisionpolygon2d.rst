@@ -14,88 +14,100 @@ CollisionPolygon2D
 Brief Description
 -----------------
 
-Editor-only class for defining a collision polygon in 2D space.
+Defines a 2D collision polygon.
 
 Member Functions
 ----------------
 
-+--------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`int<class_int>`                            | :ref:`get_build_mode<class_CollisionPolygon2D_get_build_mode>`  **(** **)** const                                              |
-+--------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`PoolVector2Array<class_poolvector2array>`  | :ref:`get_polygon<class_CollisionPolygon2D_get_polygon>`  **(** **)** const                                                    |
-+--------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`bool<class_bool>`                          | :ref:`is_disabled<class_CollisionPolygon2D_is_disabled>`  **(** **)** const                                                    |
-+--------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`bool<class_bool>`                          | :ref:`is_one_way_collision_enabled<class_CollisionPolygon2D_is_one_way_collision_enabled>`  **(** **)** const                  |
-+--------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| void                                             | :ref:`set_build_mode<class_CollisionPolygon2D_set_build_mode>`  **(** :ref:`int<class_int>` build_mode  **)**                  |
-+--------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| void                                             | :ref:`set_disabled<class_CollisionPolygon2D_set_disabled>`  **(** :ref:`bool<class_bool>` disabled  **)**                      |
-+--------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| void                                             | :ref:`set_one_way_collision<class_CollisionPolygon2D_set_one_way_collision>`  **(** :ref:`bool<class_bool>` enabled  **)**     |
-+--------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| void                                             | :ref:`set_polygon<class_CollisionPolygon2D_set_polygon>`  **(** :ref:`PoolVector2Array<class_poolvector2array>` polygon  **)** |
-+--------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`int<class_int>`                            | :ref:`get_build_mode<class_CollisionPolygon2D_get_build_mode>` **(** **)** const                                             |
++--------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`PoolVector2Array<class_poolvector2array>`  | :ref:`get_polygon<class_CollisionPolygon2D_get_polygon>` **(** **)** const                                                   |
++--------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`bool<class_bool>`                          | :ref:`is_disabled<class_CollisionPolygon2D_is_disabled>` **(** **)** const                                                   |
++--------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`bool<class_bool>`                          | :ref:`is_one_way_collision_enabled<class_CollisionPolygon2D_is_one_way_collision_enabled>` **(** **)** const                 |
++--------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
+| void                                             | :ref:`set_build_mode<class_CollisionPolygon2D_set_build_mode>` **(** :ref:`int<class_int>` build_mode **)**                  |
++--------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
+| void                                             | :ref:`set_disabled<class_CollisionPolygon2D_set_disabled>` **(** :ref:`bool<class_bool>` disabled **)**                      |
++--------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
+| void                                             | :ref:`set_one_way_collision<class_CollisionPolygon2D_set_one_way_collision>` **(** :ref:`bool<class_bool>` enabled **)**     |
++--------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
+| void                                             | :ref:`set_polygon<class_CollisionPolygon2D_set_polygon>` **(** :ref:`PoolVector2Array<class_poolvector2array>` polygon **)** |
++--------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
 
 Member Variables
 ----------------
 
-- :ref:`int<class_int>` **build_mode** - If BUILD_SOLIDS, the polygon and the area within it will have collision. If BUILD_SEGMENTS, only the edges of the polygon will have collision.
-- :ref:`bool<class_bool>` **disabled** - If true, no collision will be produced.
-- :ref:`bool<class_bool>` **one_way_collision** - If true, only edges that face up, relative to CollisionPolygon2D's rotation, will collide with other objects.
-- :ref:`PoolVector2Array<class_poolvector2array>` **polygon** - Array of vertices which define the polygon.
+  .. _class_CollisionPolygon2D_build_mode:
+
+- :ref:`int<class_int>` **build_mode** - Collision build mode. Use one of the ``BUILD\_\*`` constants. Default value: ``BUILD_SOLIDS``.
+
+  .. _class_CollisionPolygon2D_disabled:
+
+- :ref:`bool<class_bool>` **disabled** - If ``true`` no collisions will be detected.
+
+  .. _class_CollisionPolygon2D_one_way_collision:
+
+- :ref:`bool<class_bool>` **one_way_collision** - If ``true`` only edges that face up, relative to CollisionPolygon2D's rotation, will collide with other objects.
+
+  .. _class_CollisionPolygon2D_polygon:
+
+- :ref:`PoolVector2Array<class_poolvector2array>` **polygon** - The polygon's list of vertices. The final point will be connected to the first.
+
 
 Numeric Constants
 -----------------
 
-- **BUILD_SOLIDS** = **0**
-- **BUILD_SEGMENTS** = **1**
+- **BUILD_SOLIDS** = **0** --- Collisions will include the polygon and its contained area.
+- **BUILD_SEGMENTS** = **1** --- Collisions will only include the polygon edges.
 
 Description
 -----------
 
-Allows editing a collision polygon's vertices. This class is only available in the editor. It will not appear in the scene tree at runtime. Creates a :ref:`Shape2D<class_shape2d>` for gameplay. Properties modified during gameplay will have no effect.
+Provides a 2D collision polygon to a :ref:`CollisionObject2D<class_collisionobject2d>` parent. Polygon can be drawn in the editor or specified by a list of vertices.
 
 Member Function Description
 ---------------------------
 
 .. _class_CollisionPolygon2D_get_build_mode:
 
-- :ref:`int<class_int>`  **get_build_mode**  **(** **)** const
+- :ref:`int<class_int>` **get_build_mode** **(** **)** const
 
 Return whether the polygon is a :ref:`ConvexPolygonShape2D<class_convexpolygonshape2d>` (``build_mode==0``), or a :ref:`ConcavePolygonShape2D<class_concavepolygonshape2d>` (``build_mode==1``).
 
 .. _class_CollisionPolygon2D_get_polygon:
 
-- :ref:`PoolVector2Array<class_poolvector2array>`  **get_polygon**  **(** **)** const
+- :ref:`PoolVector2Array<class_poolvector2array>` **get_polygon** **(** **)** const
 
 Return the list of points that define the polygon.
 
 .. _class_CollisionPolygon2D_is_disabled:
 
-- :ref:`bool<class_bool>`  **is_disabled**  **(** **)** const
+- :ref:`bool<class_bool>` **is_disabled** **(** **)** const
 
 .. _class_CollisionPolygon2D_is_one_way_collision_enabled:
 
-- :ref:`bool<class_bool>`  **is_one_way_collision_enabled**  **(** **)** const
+- :ref:`bool<class_bool>` **is_one_way_collision_enabled** **(** **)** const
 
 .. _class_CollisionPolygon2D_set_build_mode:
 
-- void  **set_build_mode**  **(** :ref:`int<class_int>` build_mode  **)**
+- void **set_build_mode** **(** :ref:`int<class_int>` build_mode **)**
 
 Set whether the polygon is to be a :ref:`ConvexPolygonShape2D<class_convexpolygonshape2d>` (``build_mode==0``), or a :ref:`ConcavePolygonShape2D<class_concavepolygonshape2d>` (``build_mode==1``).
 
 .. _class_CollisionPolygon2D_set_disabled:
 
-- void  **set_disabled**  **(** :ref:`bool<class_bool>` disabled  **)**
+- void **set_disabled** **(** :ref:`bool<class_bool>` disabled **)**
 
 .. _class_CollisionPolygon2D_set_one_way_collision:
 
-- void  **set_one_way_collision**  **(** :ref:`bool<class_bool>` enabled  **)**
+- void **set_one_way_collision** **(** :ref:`bool<class_bool>` enabled **)**
 
 .. _class_CollisionPolygon2D_set_polygon:
 
-- void  **set_polygon**  **(** :ref:`PoolVector2Array<class_poolvector2array>` polygon  **)**
+- void **set_polygon** **(** :ref:`PoolVector2Array<class_poolvector2array>` polygon **)**
 
 Set the array of points forming the polygon.
 

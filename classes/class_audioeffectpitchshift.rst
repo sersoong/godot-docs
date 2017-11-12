@@ -14,31 +14,41 @@ AudioEffectPitchShift
 Brief Description
 -----------------
 
+Adds a Pitch shift audio effect to an Audio bus.
 
+Raises or lowers the pitch of original sound.
 
 Member Functions
 ----------------
 
-+----------------------------+------------------------------------------------------------------------------------------------------------------+
-| :ref:`float<class_float>`  | :ref:`get_pitch_scale<class_AudioEffectPitchShift_get_pitch_scale>`  **(** **)** const                           |
-+----------------------------+------------------------------------------------------------------------------------------------------------------+
-| void                       | :ref:`set_pitch_scale<class_AudioEffectPitchShift_set_pitch_scale>`  **(** :ref:`float<class_float>` rate  **)** |
-+----------------------------+------------------------------------------------------------------------------------------------------------------+
++----------------------------+----------------------------------------------------------------------------------------------------------------+
+| :ref:`float<class_float>`  | :ref:`get_pitch_scale<class_AudioEffectPitchShift_get_pitch_scale>` **(** **)** const                          |
++----------------------------+----------------------------------------------------------------------------------------------------------------+
+| void                       | :ref:`set_pitch_scale<class_AudioEffectPitchShift_set_pitch_scale>` **(** :ref:`float<class_float>` rate **)** |
++----------------------------+----------------------------------------------------------------------------------------------------------------+
 
 Member Variables
 ----------------
 
-- :ref:`float<class_float>` **pitch_scale**
+  .. _class_AudioEffectPitchShift_pitch_scale:
+
+- :ref:`float<class_float>` **pitch_scale** - Pitch value. Can range from 0 (-1 octave) to 16 (+16 octaves).
+
+
+Description
+-----------
+
+Allows modulation of pitch independently of tempo. All frequencies can be increased/decreased with minimal effect on transients.
 
 Member Function Description
 ---------------------------
 
 .. _class_AudioEffectPitchShift_get_pitch_scale:
 
-- :ref:`float<class_float>`  **get_pitch_scale**  **(** **)** const
+- :ref:`float<class_float>` **get_pitch_scale** **(** **)** const
 
 .. _class_AudioEffectPitchShift_set_pitch_scale:
 
-- void  **set_pitch_scale**  **(** :ref:`float<class_float>` rate  **)**
+- void **set_pitch_scale** **(** :ref:`float<class_float>` rate **)**
 
 

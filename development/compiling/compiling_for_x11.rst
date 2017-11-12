@@ -30,6 +30,12 @@ Distro-specific oneliners
 |               |                                                                                                            |
 |               |     pacman -S scons libxcursor libxinerama libxrandr mesa glu alsa-lib pulseaudio freetype2                |
 +---------------+------------------------------------------------------------------------------------------------------------+
+| **Debian** /  | ::                                                                                                         |
+| **Ubuntu**    |                                                                                                            |
+|               |     sudo apt-get install build-essential scons pkg-config libx11-dev libxcursor-dev libxinerama-dev \      |
+|               |         libgl1-mesa-dev libglu-dev libasound2-dev libpulse-dev libfreetype6-dev libssl-dev libudev-dev \   |
+|               |         libxrandr-dev                                                                                      |
++---------------+------------------------------------------------------------------------------------------------------------+
 | **Fedora**    | ::                                                                                                         |
 |               |                                                                                                            |
 |               |     sudo dnf install scons pkgconfig libX11-devel libXcursor-devel libXrandr-devel libXinerama-devel \     |
@@ -64,14 +70,8 @@ Distro-specific oneliners
 +---------------+------------------------------------------------------------------------------------------------------------+
 | **Solus**     | ::                                                                                                         |
 |               |                                                                                                            |
-|               |     sudo eopkg install -c system.devel scons libxcursor-devel libxinerama-devel libxrandr-devel mesalib \  |
-|               |         libglu alsa-lib pulseaudio freetype2-devel                                                         |                                  
-+---------------+------------------------------------------------------------------------------------------------------------+
-| **Ubuntu**    | ::                                                                                                         |
-|               |                                                                                                            |
-|               |     sudo apt-get install build-essential scons pkg-config libx11-dev libxcursor-dev libxinerama-dev \      |
-|               |         libgl1-mesa-dev libglu-dev libasound2-dev libpulse-dev libfreetype6-dev libssl-dev libudev-dev \   |
-|               |         libxrandr-dev                                                                                      |
+|               |     sudo eopkg install -c system.devel scons libxcursor-devel libxinerama-devel libxrandr-devel \          |
+|               |         mesalib-devel libglu alsa-lib pulseaudio freetype2-devel                                           |
 +---------------+------------------------------------------------------------------------------------------------------------+
 
 Compiling
@@ -141,7 +141,7 @@ However, if you are writing your custom modules or custom C++ code, you
 might instead want to configure your binaries as custom export templates
 here:
 
-.. image:: /img/lintemplates.png
+.. image:: img/lintemplates.png
 
 You don't even need to copy them, you can just reference the resulting
 files in the bin/ directory of your Godot source folder, so the next

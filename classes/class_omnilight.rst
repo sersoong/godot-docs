@@ -19,23 +19,35 @@ OmniDirectional Light, such as a light bulb or a candle.
 Member Functions
 ----------------
 
-+------------------------+--------------------------------------------------------------------------------------------------------+
-| :ref:`int<class_int>`  | :ref:`get_shadow_detail<class_OmniLight_get_shadow_detail>`  **(** **)** const                         |
-+------------------------+--------------------------------------------------------------------------------------------------------+
-| :ref:`int<class_int>`  | :ref:`get_shadow_mode<class_OmniLight_get_shadow_mode>`  **(** **)** const                             |
-+------------------------+--------------------------------------------------------------------------------------------------------+
-| void                   | :ref:`set_shadow_detail<class_OmniLight_set_shadow_detail>`  **(** :ref:`int<class_int>` detail  **)** |
-+------------------------+--------------------------------------------------------------------------------------------------------+
-| void                   | :ref:`set_shadow_mode<class_OmniLight_set_shadow_mode>`  **(** :ref:`int<class_int>` mode  **)**       |
-+------------------------+--------------------------------------------------------------------------------------------------------+
++------------------------+------------------------------------------------------------------------------------------------------+
+| :ref:`int<class_int>`  | :ref:`get_shadow_detail<class_OmniLight_get_shadow_detail>` **(** **)** const                        |
++------------------------+------------------------------------------------------------------------------------------------------+
+| :ref:`int<class_int>`  | :ref:`get_shadow_mode<class_OmniLight_get_shadow_mode>` **(** **)** const                            |
++------------------------+------------------------------------------------------------------------------------------------------+
+| void                   | :ref:`set_shadow_detail<class_OmniLight_set_shadow_detail>` **(** :ref:`int<class_int>` detail **)** |
++------------------------+------------------------------------------------------------------------------------------------------+
+| void                   | :ref:`set_shadow_mode<class_OmniLight_set_shadow_mode>` **(** :ref:`int<class_int>` mode **)**       |
++------------------------+------------------------------------------------------------------------------------------------------+
 
 Member Variables
 ----------------
 
+  .. _class_OmniLight_omni_attenuation:
+
 - :ref:`float<class_float>` **omni_attenuation**
+
+  .. _class_OmniLight_omni_range:
+
 - :ref:`float<class_float>` **omni_range**
+
+  .. _class_OmniLight_omni_shadow_detail:
+
 - :ref:`int<class_int>` **omni_shadow_detail**
+
+  .. _class_OmniLight_omni_shadow_mode:
+
 - :ref:`int<class_int>` **omni_shadow_mode**
+
 
 Numeric Constants
 -----------------
@@ -55,18 +67,18 @@ Member Function Description
 
 .. _class_OmniLight_get_shadow_detail:
 
-- :ref:`int<class_int>`  **get_shadow_detail**  **(** **)** const
+- :ref:`int<class_int>` **get_shadow_detail** **(** **)** const
 
 .. _class_OmniLight_get_shadow_mode:
 
-- :ref:`int<class_int>`  **get_shadow_mode**  **(** **)** const
+- :ref:`int<class_int>` **get_shadow_mode** **(** **)** const
 
 .. _class_OmniLight_set_shadow_detail:
 
-- void  **set_shadow_detail**  **(** :ref:`int<class_int>` detail  **)**
+- void **set_shadow_detail** **(** :ref:`int<class_int>` detail **)**
 
 .. _class_OmniLight_set_shadow_mode:
 
-- void  **set_shadow_mode**  **(** :ref:`int<class_int>` mode  **)**
+- void **set_shadow_mode** **(** :ref:`int<class_int>` mode **)**
 
 

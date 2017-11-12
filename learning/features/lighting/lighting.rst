@@ -27,7 +27,7 @@ Omni and Spot. Each has different uses and will be described in
 detail below, but first let's take a look at the common parameters for
 lights:
 
-.. image:: /img/light_params.png
+.. image:: img/light_params.png
 
 Each one has a specific function:
 
@@ -36,7 +36,7 @@ Each one has a specific function:
    be defined in this enumerator. The role will be followed even if the
    light is disabled, which allows to configure a light and then disable
    it for baking.
--  **Energy**: This value is a multiplier for the light, it's specially
+-  **Energy**: This value is a multiplier for the light, it's especially
    useful for :ref:`doc_high_dynamic_range` and for Spot and Omni lights, because it can
    create very bright spots near the emitter.
 -  **Diffuse and Specular**: These light values get multiplied by the
@@ -61,7 +61,7 @@ covering the whole scene. The directional light node is represented by a big arr
 indicates the direction of the light rays. However, the position of the node
 does not affect the lighting at all, and can be anywhere.
 
-.. image:: /img/light_directional.png
+.. image:: img/light_directional.png
 
 Every face whose front-side is hit by the light rays is lit, the others stay dark.
 Most light types
@@ -78,7 +78,7 @@ decreases with the distance and vanishes at the defined radius. Omni light sourc
 should be used to represent lamps or bulbs or any other light source that originates
 approximately in a point.
 
-.. image:: /img/light_omni.png
+.. image:: img/light_omni.png
 
 In reality, the attenuation of omni light is proportional to the squared distance
 from the point source. This can be easily understood if you imagine a sphere around
@@ -92,7 +92,7 @@ never reach zero and have almost infinitely large values near the emitter.
 So Godot simulates omni light with an artist-controlled exponential curve
 instead.
 
-.. image:: /img/light_attenuation.png
+.. image:: img/light_attenuation.png
 
 Spot light
 ~~~~~~~~~~
@@ -102,7 +102,7 @@ Spot lights are similar to omni lights, except they emit light only into a cone
 car lights, etc. This kind of light is also attenuated towards the
 opposite direction it points to.
 
-.. image:: /img/light_spot.png
+.. image:: img/light_spot.png
 
 Ambient light
 -------------

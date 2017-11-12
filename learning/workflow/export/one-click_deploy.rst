@@ -9,7 +9,7 @@ Sounds good, what is it?
 This feature will pop up automatically once a platform is properly
 configured and a supported device is connected to the computer. Since
 things can go wrong at many levels (platform may not be configured
-correctly, SDK may incorrectly installed, device may be improperly
+correctly, SDK may be incorrectly installed, device may be improperly
 configured, kitty ate the USB cable, etc.), it's good to let the user
 know that it exists.
 
@@ -28,6 +28,6 @@ Steps for one-click deploy
 #. Connect the device..
 #. And voila!
 
-.. image:: /img/oneclick.png
+.. image:: img/oneclick.png
 
 Click once.. and deploy!

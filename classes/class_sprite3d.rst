@@ -14,101 +14,129 @@ Sprite3D
 Brief Description
 -----------------
 
-
+2D Sprite node in 3D world.
 
 Member Functions
 ----------------
 
-+--------------------------------+-----------------------------------------------------------------------------------------------------+
-| :ref:`int<class_int>`          | :ref:`get_frame<class_Sprite3D_get_frame>`  **(** **)** const                                       |
-+--------------------------------+-----------------------------------------------------------------------------------------------------+
-| :ref:`int<class_int>`          | :ref:`get_hframes<class_Sprite3D_get_hframes>`  **(** **)** const                                   |
-+--------------------------------+-----------------------------------------------------------------------------------------------------+
-| :ref:`Rect2<class_rect2>`      | :ref:`get_region_rect<class_Sprite3D_get_region_rect>`  **(** **)** const                           |
-+--------------------------------+-----------------------------------------------------------------------------------------------------+
-| :ref:`Texture<class_texture>`  | :ref:`get_texture<class_Sprite3D_get_texture>`  **(** **)** const                                   |
-+--------------------------------+-----------------------------------------------------------------------------------------------------+
-| :ref:`int<class_int>`          | :ref:`get_vframes<class_Sprite3D_get_vframes>`  **(** **)** const                                   |
-+--------------------------------+-----------------------------------------------------------------------------------------------------+
-| :ref:`bool<class_bool>`        | :ref:`is_region<class_Sprite3D_is_region>`  **(** **)** const                                       |
-+--------------------------------+-----------------------------------------------------------------------------------------------------+
-| void                           | :ref:`set_frame<class_Sprite3D_set_frame>`  **(** :ref:`int<class_int>` frame  **)**                |
-+--------------------------------+-----------------------------------------------------------------------------------------------------+
-| void                           | :ref:`set_hframes<class_Sprite3D_set_hframes>`  **(** :ref:`int<class_int>` hframes  **)**          |
-+--------------------------------+-----------------------------------------------------------------------------------------------------+
-| void                           | :ref:`set_region<class_Sprite3D_set_region>`  **(** :ref:`bool<class_bool>` enabled  **)**          |
-+--------------------------------+-----------------------------------------------------------------------------------------------------+
-| void                           | :ref:`set_region_rect<class_Sprite3D_set_region_rect>`  **(** :ref:`Rect2<class_rect2>` rect  **)** |
-+--------------------------------+-----------------------------------------------------------------------------------------------------+
-| void                           | :ref:`set_texture<class_Sprite3D_set_texture>`  **(** :ref:`Texture<class_texture>` texture  **)**  |
-+--------------------------------+-----------------------------------------------------------------------------------------------------+
-| void                           | :ref:`set_vframes<class_Sprite3D_set_vframes>`  **(** :ref:`int<class_int>` vframes  **)**          |
-+--------------------------------+-----------------------------------------------------------------------------------------------------+
++--------------------------------+---------------------------------------------------------------------------------------------------+
+| :ref:`int<class_int>`          | :ref:`get_frame<class_Sprite3D_get_frame>` **(** **)** const                                      |
++--------------------------------+---------------------------------------------------------------------------------------------------+
+| :ref:`int<class_int>`          | :ref:`get_hframes<class_Sprite3D_get_hframes>` **(** **)** const                                  |
++--------------------------------+---------------------------------------------------------------------------------------------------+
+| :ref:`Rect2<class_rect2>`      | :ref:`get_region_rect<class_Sprite3D_get_region_rect>` **(** **)** const                          |
++--------------------------------+---------------------------------------------------------------------------------------------------+
+| :ref:`Texture<class_texture>`  | :ref:`get_texture<class_Sprite3D_get_texture>` **(** **)** const                                  |
++--------------------------------+---------------------------------------------------------------------------------------------------+
+| :ref:`int<class_int>`          | :ref:`get_vframes<class_Sprite3D_get_vframes>` **(** **)** const                                  |
++--------------------------------+---------------------------------------------------------------------------------------------------+
+| :ref:`bool<class_bool>`        | :ref:`is_region<class_Sprite3D_is_region>` **(** **)** const                                      |
++--------------------------------+---------------------------------------------------------------------------------------------------+
+| void                           | :ref:`set_frame<class_Sprite3D_set_frame>` **(** :ref:`int<class_int>` frame **)**                |
++--------------------------------+---------------------------------------------------------------------------------------------------+
+| void                           | :ref:`set_hframes<class_Sprite3D_set_hframes>` **(** :ref:`int<class_int>` hframes **)**          |
++--------------------------------+---------------------------------------------------------------------------------------------------+
+| void                           | :ref:`set_region<class_Sprite3D_set_region>` **(** :ref:`bool<class_bool>` enabled **)**          |
++--------------------------------+---------------------------------------------------------------------------------------------------+
+| void                           | :ref:`set_region_rect<class_Sprite3D_set_region_rect>` **(** :ref:`Rect2<class_rect2>` rect **)** |
++--------------------------------+---------------------------------------------------------------------------------------------------+
+| void                           | :ref:`set_texture<class_Sprite3D_set_texture>` **(** :ref:`Texture<class_texture>` texture **)**  |
++--------------------------------+---------------------------------------------------------------------------------------------------+
+| void                           | :ref:`set_vframes<class_Sprite3D_set_vframes>` **(** :ref:`int<class_int>` vframes **)**          |
++--------------------------------+---------------------------------------------------------------------------------------------------+
 
 Signals
 -------
 
--  **frame_changed**  **(** **)**
+.. _class_Sprite3D_frame_changed:
+
+- **frame_changed** **(** **)**
+
+Emitted when the :ref:`frame<class_Sprite3D_frame>` changes.
+
 
 Member Variables
 ----------------
 
-- :ref:`int<class_int>` **frame**
-- :ref:`int<class_int>` **hframes**
-- :ref:`bool<class_bool>` **region_enabled**
-- :ref:`Rect2<class_rect2>` **region_rect**
-- :ref:`Texture<class_texture>` **texture**
-- :ref:`int<class_int>` **vframes**
+  .. _class_Sprite3D_frame:
+
+- :ref:`int<class_int>` **frame** - Current frame to display from sprite sheet. :ref:`vframes<class_Sprite3D_vframes>` or :ref:`hframes<class_Sprite3D_hframes>` must be greater than 1.
+
+  .. _class_Sprite3D_hframes:
+
+- :ref:`int<class_int>` **hframes** - The number of columns in the sprite sheet.
+
+  .. _class_Sprite3D_region_enabled:
+
+- :ref:`bool<class_bool>` **region_enabled** - If ``true`` texture will be cut from a larger atlas texture. See :ref:`region_rect<class_Sprite3D_region_rect>`. Default value: ``false``.
+
+  .. _class_Sprite3D_region_rect:
+
+- :ref:`Rect2<class_rect2>` **region_rect** - The region of the atlas texture to display. :ref:`region_enabled<class_Sprite3D_region_enabled>` must be ``true``.
+
+  .. _class_Sprite3D_texture:
+
+- :ref:`Texture<class_texture>` **texture** - :ref:`Texture<class_texture>` object to draw.
+
+  .. _class_Sprite3D_vframes:
+
+- :ref:`int<class_int>` **vframes** - The number of rows in the sprite sheet.
+
+
+Description
+-----------
+
+A node that displays a 2D texture in a 3D environment. The texture displayed can be a region from a larger atlas texture, or a frame from a sprite sheet animation.
 
 Member Function Description
 ---------------------------
 
 .. _class_Sprite3D_get_frame:
 
-- :ref:`int<class_int>`  **get_frame**  **(** **)** const
+- :ref:`int<class_int>` **get_frame** **(** **)** const
 
 .. _class_Sprite3D_get_hframes:
 
-- :ref:`int<class_int>`  **get_hframes**  **(** **)** const
+- :ref:`int<class_int>` **get_hframes** **(** **)** const
 
 .. _class_Sprite3D_get_region_rect:
 
-- :ref:`Rect2<class_rect2>`  **get_region_rect**  **(** **)** const
+- :ref:`Rect2<class_rect2>` **get_region_rect** **(** **)** const
 
 .. _class_Sprite3D_get_texture:
 
-- :ref:`Texture<class_texture>`  **get_texture**  **(** **)** const
+- :ref:`Texture<class_texture>` **get_texture** **(** **)** const
 
 .. _class_Sprite3D_get_vframes:
 
-- :ref:`int<class_int>`  **get_vframes**  **(** **)** const
+- :ref:`int<class_int>` **get_vframes** **(** **)** const
 
 .. _class_Sprite3D_is_region:
 
-- :ref:`bool<class_bool>`  **is_region**  **(** **)** const
+- :ref:`bool<class_bool>` **is_region** **(** **)** const
 
 .. _class_Sprite3D_set_frame:
 
-- void  **set_frame**  **(** :ref:`int<class_int>` frame  **)**
+- void **set_frame** **(** :ref:`int<class_int>` frame **)**
 
 .. _class_Sprite3D_set_hframes:
 
-- void  **set_hframes**  **(** :ref:`int<class_int>` hframes  **)**
+- void **set_hframes** **(** :ref:`int<class_int>` hframes **)**
 
 .. _class_Sprite3D_set_region:
 
-- void  **set_region**  **(** :ref:`bool<class_bool>` enabled  **)**
+- void **set_region** **(** :ref:`bool<class_bool>` enabled **)**
 
 .. _class_Sprite3D_set_region_rect:
 
-- void  **set_region_rect**  **(** :ref:`Rect2<class_rect2>` rect  **)**
+- void **set_region_rect** **(** :ref:`Rect2<class_rect2>` rect **)**
 
 .. _class_Sprite3D_set_texture:
 
-- void  **set_texture**  **(** :ref:`Texture<class_texture>` texture  **)**
+- void **set_texture** **(** :ref:`Texture<class_texture>` texture **)**
 
 .. _class_Sprite3D_set_vframes:
 
-- void  **set_vframes**  **(** :ref:`int<class_int>` vframes  **)**
+- void **set_vframes** **(** :ref:`int<class_int>` vframes **)**
 
 

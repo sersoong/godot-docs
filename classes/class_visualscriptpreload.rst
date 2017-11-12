@@ -14,31 +14,47 @@ VisualScriptPreload
 Brief Description
 -----------------
 
-
+Creates a new :ref:`Resource<class_resource>` or loads one from the filesystem.
 
 Member Functions
 ----------------
 
-+----------------------------------+------------------------------------------------------------------------------------------------------------------+
-| :ref:`Resource<class_resource>`  | :ref:`get_preload<class_VisualScriptPreload_get_preload>`  **(** **)** const                                     |
-+----------------------------------+------------------------------------------------------------------------------------------------------------------+
-| void                             | :ref:`set_preload<class_VisualScriptPreload_set_preload>`  **(** :ref:`Resource<class_resource>` resource  **)** |
-+----------------------------------+------------------------------------------------------------------------------------------------------------------+
++----------------------------------+----------------------------------------------------------------------------------------------------------------+
+| :ref:`Resource<class_resource>`  | :ref:`get_preload<class_VisualScriptPreload_get_preload>` **(** **)** const                                    |
++----------------------------------+----------------------------------------------------------------------------------------------------------------+
+| void                             | :ref:`set_preload<class_VisualScriptPreload_set_preload>` **(** :ref:`Resource<class_resource>` resource **)** |
++----------------------------------+----------------------------------------------------------------------------------------------------------------+
 
 Member Variables
 ----------------
 
-- :ref:`Resource<class_resource>` **resource**
+  .. _class_VisualScriptPreload_resource:
+
+- :ref:`Resource<class_resource>` **resource** - The :ref:`Resource<class_resource>` to load.
+
+
+Description
+-----------
+
+Creates a new :ref:`Resource<class_resource>` or loads one from the filesystem.
+
+**Input Ports:**
+
+none
+
+**Output Ports:**
+
+- Data (object): ``res``
 
 Member Function Description
 ---------------------------
 
 .. _class_VisualScriptPreload_get_preload:
 
-- :ref:`Resource<class_resource>`  **get_preload**  **(** **)** const
+- :ref:`Resource<class_resource>` **get_preload** **(** **)** const
 
 .. _class_VisualScriptPreload_set_preload:
 
-- void  **set_preload**  **(** :ref:`Resource<class_resource>` resource  **)**
+- void **set_preload** **(** :ref:`Resource<class_resource>` resource **)**
 
 

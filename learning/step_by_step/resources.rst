@@ -45,7 +45,7 @@ integer, Vector2, etc) and one of those types can be a resource. This
 means that both nodes and resources can contain resources as properties.
 To make it a little more visual:
 
-.. image:: /img/nodes_resources.png
+.. image:: img/nodes_resources.png
 
 External vs built-in
 --------------------
@@ -56,13 +56,13 @@ The resource properties can reference resources in two ways,
 To be more specific, here's a :ref:`Texture <class_Texture>`
 in a :ref:`Sprite <class_Sprite>` node:
 
-.. image:: /img/spriteprop.png
+.. image:: img/spriteprop.png
 
 Pressing the ">" button on the right side of the preview allows to
 view and edit the resources properties. One of the properties (path)
 shows where it comes from. In this case, it comes from a png image.
 
-.. image:: /img/resourcerobi.png
+.. image:: img/resourcerobi.png
 
 When the resource comes from a file, it is considered an *external*
 resource. If the path property is erased (or it never had a path to
@@ -99,10 +99,9 @@ parameter, because it loads the resource at compile-time.
 
 Loading scenes
 --------------
-
-Scenes are also resources, but there is a catch. Scenes saved to disk
-are resources of type :ref:`PackedScene <class_PackedScene>`,
-this means that the scene is packed inside a resource.
+Scenes are also resources, but there is a catch. Scenes saved to disk 
+are resources of type :ref:`PackedScene <class_PackedScene>`. This means that 
+the scene is packed inside a resource.
 
 To obtain an instance of the scene, the method
 :ref:`PackedScene.instance() <class_PackedScene_instance>`
@@ -114,9 +113,9 @@ must be used.
             var bullet = preload("res://bullet.tscn").instance()
             add_child(bullet)                  
 
-This method creates the nodes in hierarchy, configures them (sets all
-the properties) and returns the root node of the scene, which can be
-added to any other node.
+This method creates the nodes in the scene's hierarchy, configures 
+them (sets all the properties) and returns the root node of the scene, 
+which can be added to any other node.
 
 The approach has several advantages. As the
 :ref:`PackedScene.instance() <class_PackedScene_instance>`

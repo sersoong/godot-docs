@@ -19,51 +19,81 @@ Scalable texture-based frame that tiles the texture's centers and sides, but kee
 Member Functions
 ----------------
 
-+--------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`int<class_int>`          | :ref:`get_h_axis_stretch_mode<class_NinePatchRect_get_h_axis_stretch_mode>`  **(** **)** const                                        |
-+--------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`int<class_int>`          | :ref:`get_patch_margin<class_NinePatchRect_get_patch_margin>`  **(** :ref:`int<class_int>` margin  **)** const                        |
-+--------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`Rect2<class_rect2>`      | :ref:`get_region_rect<class_NinePatchRect_get_region_rect>`  **(** **)** const                                                        |
-+--------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`Texture<class_texture>`  | :ref:`get_texture<class_NinePatchRect_get_texture>`  **(** **)** const                                                                |
-+--------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`int<class_int>`          | :ref:`get_v_axis_stretch_mode<class_NinePatchRect_get_v_axis_stretch_mode>`  **(** **)** const                                        |
-+--------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`bool<class_bool>`        | :ref:`is_draw_center_enabled<class_NinePatchRect_is_draw_center_enabled>`  **(** **)** const                                          |
-+--------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| void                           | :ref:`set_draw_center<class_NinePatchRect_set_draw_center>`  **(** :ref:`bool<class_bool>` draw_center  **)**                         |
-+--------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| void                           | :ref:`set_h_axis_stretch_mode<class_NinePatchRect_set_h_axis_stretch_mode>`  **(** :ref:`int<class_int>` mode  **)**                  |
-+--------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| void                           | :ref:`set_patch_margin<class_NinePatchRect_set_patch_margin>`  **(** :ref:`int<class_int>` margin, :ref:`int<class_int>` value  **)** |
-+--------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| void                           | :ref:`set_region_rect<class_NinePatchRect_set_region_rect>`  **(** :ref:`Rect2<class_rect2>` rect  **)**                              |
-+--------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| void                           | :ref:`set_texture<class_NinePatchRect_set_texture>`  **(** :ref:`Texture<class_texture>` texture  **)**                               |
-+--------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| void                           | :ref:`set_v_axis_stretch_mode<class_NinePatchRect_set_v_axis_stretch_mode>`  **(** :ref:`int<class_int>` mode  **)**                  |
-+--------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`int<class_int>`          | :ref:`get_h_axis_stretch_mode<class_NinePatchRect_get_h_axis_stretch_mode>` **(** **)** const                                       |
++--------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`int<class_int>`          | :ref:`get_patch_margin<class_NinePatchRect_get_patch_margin>` **(** :ref:`int<class_int>` margin **)** const                        |
++--------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`Rect2<class_rect2>`      | :ref:`get_region_rect<class_NinePatchRect_get_region_rect>` **(** **)** const                                                       |
++--------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`Texture<class_texture>`  | :ref:`get_texture<class_NinePatchRect_get_texture>` **(** **)** const                                                               |
++--------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`int<class_int>`          | :ref:`get_v_axis_stretch_mode<class_NinePatchRect_get_v_axis_stretch_mode>` **(** **)** const                                       |
++--------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`bool<class_bool>`        | :ref:`is_draw_center_enabled<class_NinePatchRect_is_draw_center_enabled>` **(** **)** const                                         |
++--------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+| void                           | :ref:`set_draw_center<class_NinePatchRect_set_draw_center>` **(** :ref:`bool<class_bool>` draw_center **)**                         |
++--------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+| void                           | :ref:`set_h_axis_stretch_mode<class_NinePatchRect_set_h_axis_stretch_mode>` **(** :ref:`int<class_int>` mode **)**                  |
++--------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+| void                           | :ref:`set_patch_margin<class_NinePatchRect_set_patch_margin>` **(** :ref:`int<class_int>` margin, :ref:`int<class_int>` value **)** |
++--------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+| void                           | :ref:`set_region_rect<class_NinePatchRect_set_region_rect>` **(** :ref:`Rect2<class_rect2>` rect **)**                              |
++--------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+| void                           | :ref:`set_texture<class_NinePatchRect_set_texture>` **(** :ref:`Texture<class_texture>` texture **)**                               |
++--------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+| void                           | :ref:`set_v_axis_stretch_mode<class_NinePatchRect_set_v_axis_stretch_mode>` **(** :ref:`int<class_int>` mode **)**                  |
++--------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
 
 Signals
 -------
 
--  **texture_changed**  **(** **)**
+.. _class_NinePatchRect_texture_changed:
+
+- **texture_changed** **(** **)**
+
 Fired when the node's texture changes.
 
 
 Member Variables
 ----------------
 
+  .. _class_NinePatchRect_axis_stretch_horizontal:
+
 - :ref:`int<class_int>` **axis_stretch_horizontal** - Doesn't do anything at the time of writing.
+
+  .. _class_NinePatchRect_axis_stretch_vertical:
+
 - :ref:`int<class_int>` **axis_stretch_vertical** - Doesn't do anything at the time of writing.
-- :ref:`bool<class_bool>` **draw_center** - If [code]true[/code], draw the panel's center. Else, only draw the 9-slice's borders. Default value: [code]true[/code]
-- :ref:`int<class_int>` **patch_margin_bottom** - The height of the 9-slice's bottom row. A margin of 16 means the 9-slice's bottom corners and side will have a height of 16 pixels. You can set all 4 margin values indivually to create panels with non-uniform borders.
+
+  .. _class_NinePatchRect_draw_center:
+
+- :ref:`bool<class_bool>` **draw_center** - If ``true``, draw the panel's center. Else, only draw the 9-slice's borders. Default value: ``true``
+
+  .. _class_NinePatchRect_patch_margin_bottom:
+
+- :ref:`int<class_int>` **patch_margin_bottom** - The height of the 9-slice's bottom row. A margin of 16 means the 9-slice's bottom corners and side will have a height of 16 pixels. You can set all 4 margin values individually to create panels with non-uniform borders.
+
+  .. _class_NinePatchRect_patch_margin_left:
+
 - :ref:`int<class_int>` **patch_margin_left** - The height of the 9-slice's left column.
+
+  .. _class_NinePatchRect_patch_margin_right:
+
 - :ref:`int<class_int>` **patch_margin_right** - The height of the 9-slice's right column.
+
+  .. _class_NinePatchRect_patch_margin_top:
+
 - :ref:`int<class_int>` **patch_margin_top** - The height of the 9-slice's top row.
+
+  .. _class_NinePatchRect_region_rect:
+
 - :ref:`Rect2<class_rect2>` **region_rect** - Rectangular region of the texture to sample from. If you're working with an atlas, use this property to define the area the 9-slice should use. All other properties are relative to this one.
+
+  .. _class_NinePatchRect_texture:
+
 - :ref:`Texture<class_texture>` **texture** - The node's texture resource.
+
 
 Numeric Constants
 -----------------
@@ -82,50 +112,50 @@ Member Function Description
 
 .. _class_NinePatchRect_get_h_axis_stretch_mode:
 
-- :ref:`int<class_int>`  **get_h_axis_stretch_mode**  **(** **)** const
+- :ref:`int<class_int>` **get_h_axis_stretch_mode** **(** **)** const
 
 .. _class_NinePatchRect_get_patch_margin:
 
-- :ref:`int<class_int>`  **get_patch_margin**  **(** :ref:`int<class_int>` margin  **)** const
+- :ref:`int<class_int>` **get_patch_margin** **(** :ref:`int<class_int>` margin **)** const
 
 .. _class_NinePatchRect_get_region_rect:
 
-- :ref:`Rect2<class_rect2>`  **get_region_rect**  **(** **)** const
+- :ref:`Rect2<class_rect2>` **get_region_rect** **(** **)** const
 
 .. _class_NinePatchRect_get_texture:
 
-- :ref:`Texture<class_texture>`  **get_texture**  **(** **)** const
+- :ref:`Texture<class_texture>` **get_texture** **(** **)** const
 
 .. _class_NinePatchRect_get_v_axis_stretch_mode:
 
-- :ref:`int<class_int>`  **get_v_axis_stretch_mode**  **(** **)** const
+- :ref:`int<class_int>` **get_v_axis_stretch_mode** **(** **)** const
 
 .. _class_NinePatchRect_is_draw_center_enabled:
 
-- :ref:`bool<class_bool>`  **is_draw_center_enabled**  **(** **)** const
+- :ref:`bool<class_bool>` **is_draw_center_enabled** **(** **)** const
 
 .. _class_NinePatchRect_set_draw_center:
 
-- void  **set_draw_center**  **(** :ref:`bool<class_bool>` draw_center  **)**
+- void **set_draw_center** **(** :ref:`bool<class_bool>` draw_center **)**
 
 .. _class_NinePatchRect_set_h_axis_stretch_mode:
 
-- void  **set_h_axis_stretch_mode**  **(** :ref:`int<class_int>` mode  **)**
+- void **set_h_axis_stretch_mode** **(** :ref:`int<class_int>` mode **)**
 
 .. _class_NinePatchRect_set_patch_margin:
 
-- void  **set_patch_margin**  **(** :ref:`int<class_int>` margin, :ref:`int<class_int>` value  **)**
+- void **set_patch_margin** **(** :ref:`int<class_int>` margin, :ref:`int<class_int>` value **)**
 
 .. _class_NinePatchRect_set_region_rect:
 
-- void  **set_region_rect**  **(** :ref:`Rect2<class_rect2>` rect  **)**
+- void **set_region_rect** **(** :ref:`Rect2<class_rect2>` rect **)**
 
 .. _class_NinePatchRect_set_texture:
 
-- void  **set_texture**  **(** :ref:`Texture<class_texture>` texture  **)**
+- void **set_texture** **(** :ref:`Texture<class_texture>` texture **)**
 
 .. _class_NinePatchRect_set_v_axis_stretch_mode:
 
-- void  **set_v_axis_stretch_mode**  **(** :ref:`int<class_int>` mode  **)**
+- void **set_v_axis_stretch_mode** **(** :ref:`int<class_int>` mode **)**
 
 

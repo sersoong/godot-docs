@@ -14,57 +14,73 @@ VisualScriptComment
 Brief Description
 -----------------
 
-
+A Visual Script node used to annotate the script.
 
 Member Functions
 ----------------
 
-+--------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-| :ref:`String<class_string>`    | :ref:`get_description<class_VisualScriptComment_get_description>`  **(** **)** const                                    |
-+--------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-| :ref:`Vector2<class_vector2>`  | :ref:`get_size<class_VisualScriptComment_get_size>`  **(** **)** const                                                  |
-+--------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-| :ref:`String<class_string>`    | :ref:`get_title<class_VisualScriptComment_get_title>`  **(** **)** const                                                |
-+--------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-| void                           | :ref:`set_description<class_VisualScriptComment_set_description>`  **(** :ref:`String<class_string>` description  **)** |
-+--------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-| void                           | :ref:`set_size<class_VisualScriptComment_set_size>`  **(** :ref:`Vector2<class_vector2>` size  **)**                    |
-+--------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-| void                           | :ref:`set_title<class_VisualScriptComment_set_title>`  **(** :ref:`String<class_string>` title  **)**                   |
-+--------------------------------+-------------------------------------------------------------------------------------------------------------------------+
++--------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| :ref:`String<class_string>`    | :ref:`get_description<class_VisualScriptComment_get_description>` **(** **)** const                                   |
++--------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| :ref:`Vector2<class_vector2>`  | :ref:`get_size<class_VisualScriptComment_get_size>` **(** **)** const                                                 |
++--------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| :ref:`String<class_string>`    | :ref:`get_title<class_VisualScriptComment_get_title>` **(** **)** const                                               |
++--------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| void                           | :ref:`set_description<class_VisualScriptComment_set_description>` **(** :ref:`String<class_string>` description **)** |
++--------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| void                           | :ref:`set_size<class_VisualScriptComment_set_size>` **(** :ref:`Vector2<class_vector2>` size **)**                    |
++--------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| void                           | :ref:`set_title<class_VisualScriptComment_set_title>` **(** :ref:`String<class_string>` title **)**                   |
++--------------------------------+-----------------------------------------------------------------------------------------------------------------------+
 
 Member Variables
 ----------------
 
-- :ref:`String<class_string>` **description**
-- :ref:`Vector2<class_vector2>` **size**
-- :ref:`String<class_string>` **title**
+  .. _class_VisualScriptComment_description:
+
+- :ref:`String<class_string>` **description** - The text inside the comment node.
+
+  .. _class_VisualScriptComment_size:
+
+- :ref:`Vector2<class_vector2>` **size** - The comment node's size (in pixels).
+
+  .. _class_VisualScriptComment_title:
+
+- :ref:`String<class_string>` **title** - The comment node's title.
+
+
+Description
+-----------
+
+A Visual Script node used to display annotations in the script, so that code may be documented.
+
+Comment nodes can be resized so they encompass a group of nodes.
 
 Member Function Description
 ---------------------------
 
 .. _class_VisualScriptComment_get_description:
 
-- :ref:`String<class_string>`  **get_description**  **(** **)** const
+- :ref:`String<class_string>` **get_description** **(** **)** const
 
 .. _class_VisualScriptComment_get_size:
 
-- :ref:`Vector2<class_vector2>`  **get_size**  **(** **)** const
+- :ref:`Vector2<class_vector2>` **get_size** **(** **)** const
 
 .. _class_VisualScriptComment_get_title:
 
-- :ref:`String<class_string>`  **get_title**  **(** **)** const
+- :ref:`String<class_string>` **get_title** **(** **)** const
 
 .. _class_VisualScriptComment_set_description:
 
-- void  **set_description**  **(** :ref:`String<class_string>` description  **)**
+- void **set_description** **(** :ref:`String<class_string>` description **)**
 
 .. _class_VisualScriptComment_set_size:
 
-- void  **set_size**  **(** :ref:`Vector2<class_vector2>` size  **)**
+- void **set_size** **(** :ref:`Vector2<class_vector2>` size **)**
 
 .. _class_VisualScriptComment_set_title:
 
-- void  **set_title**  **(** :ref:`String<class_string>` title  **)**
+- void **set_title** **(** :ref:`String<class_string>` title **)**
 
 

@@ -15,7 +15,7 @@ Differences
 +-------------------+-----------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+
 |                   | Unity                                                                             | Godot                                                                                                          |
 +===================+===================================================================================+================================================================================================================+
-| License           | Proprietary, closed, free license with revenue caps and usage restrictions        | MIT License,  free and fully open source without any restriction                                                |
+| License           | Proprietary, closed, free license with revenue caps and usage restrictions        | MIT license, free and fully open source without any restriction                                                |
 +-------------------+-----------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+
 | OS (editor)       | Windows, OSX, Linux (unofficial and unsupported)                                  | Windows, X11 (Linux, \*BSD), Haiku, OSX                                                                        |
 +-------------------+-----------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+
@@ -23,7 +23,7 @@ Differences
 |                   | | Mobile: Android, iOS, Windows Phone, Tizen,                                     | | Mobile: Android, iOS, Blackberry (deprecated)                                                                |
 |                   | | Web: WebGL                                                                      | | Web: WebGL, HTML5 (via emscripten, broken)                                                                   |
 |                   | | Consoles: PS4, PS Vita, XBox One, XBox 360, WiiU, 3DS                           |                                                                                                                |
-|                   | | VR: Oculus Rift, SteamVR, Google Cardboard, Playstation VR, Gear VR, HoloLens  |                                                                                                                |
+|                   | | VR: Oculus Rift, SteamVR, Google Cardboard, Playstation VR, Gear VR, HoloLens   |                                                                                                                |
 |                   | | TV: AndroidTV, Samsung SMARTTV, tvOS                                            |                                                                                                                |
 +-------------------+-----------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+
 | Scene system      | | Component/Scene (GameObject > Component)                                        | Scene tree and nodes, allowing scenes to be nested and/or inherit other scenes                                 |
@@ -47,8 +47,8 @@ The editor
 
 Godot Engine provides a rich-featured editor that allows you to build your games. The pictures below display both editors with colored blocks to indicate common functionalities.
 
-.. image:: /img/unity-gui-overlay.png
-.. image:: /img/godot-gui-overlay.png
+.. image:: img/unity-gui-overlay.png
+.. image:: img/godot-gui-overlay.png
 
 
 Note that Godot editor allows you to dock each panel at the side of the scene editor you wish.
@@ -120,7 +120,7 @@ These are the most important concepts you need to remember: "node", "parent node
 Project organization
 --------------------
 
-.. image:: /img/unity-project-organization-example.png
+.. image:: img/unity-project-organization-example.png
 
 We previously observed that there is no perfect solution to set a project architecture. Any solution will work for Unity and Godot, so this point has a lesser importance.
 
@@ -136,11 +136,11 @@ The concept of prefabs as provided by Unity is a 'template' element of the scene
 
 Godot does not provide prefabs as such, but this functionality is here again filled thanks to its scene system: as we saw the scene system is organized as a tree. Godot allows you to save a subtree of a scene as its own scene, thus saved in its own file. This new scene can then be instanced as many times as you want. Any change you make to this new, separate scene will be applied to its instances. However, any change you make to the instance will not have any impact on the 'template' scene.
 
-.. image:: /img/save-branch-as-scene.png
+.. image:: img/save-branch-as-scene.png
 
 To be precise, you can modify the parameters of the instance in the Inspector panel. However, the nodes that compose this instance are locked and you can unlock them if you need to by clicking the clapperboard icon next to the instance in the Scene tree, and select "Editable children" in the menu. You don't need to do this to add new children nodes to this node, but remember that these new children will belong to the instance, not the 'template' scene. If you want to add new children to all the instances of your 'template' scene, then you need to add it once in the 'template' scene.
 
-.. image:: /img/editable-children.png
+.. image:: img/editable-children.png
 
 Glossary correspondence
 -----------------------
@@ -177,11 +177,9 @@ You can control nodes by accessing them using a script, and call functions (buil
 But there's more! Certain nodes throw signals when certain actions happen. You can connect these signals to call a specific function when they happen. Note that you can define your own signals and send them whenever you want. This feature is documented `here <gdscript.html#signals>`_.
 
 
-
 Using Godot in C++
 ------------------
 
 Just for your information, Godot also allows you to develop your project directly in C++ by using its API, which is not possible with Unity at the moment. As an example, you can consider Godot Engine's editor as a "game" written in C++ using Godot API. 
 
 If you are interested in using Godot in C++, you may want to start reading the `Developing in C++ <_developing.html>`_ page.
-

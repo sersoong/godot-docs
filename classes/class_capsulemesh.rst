@@ -19,31 +19,43 @@ Class representing a capsule-shaped :ref:`PrimitiveMesh<class_primitivemesh>`.
 Member Functions
 ----------------
 
-+----------------------------+----------------------------------------------------------------------------------------------------------------+
-| :ref:`float<class_float>`  | :ref:`get_mid_height<class_CapsuleMesh_get_mid_height>`  **(** **)** const                                     |
-+----------------------------+----------------------------------------------------------------------------------------------------------------+
-| :ref:`int<class_int>`      | :ref:`get_radial_segments<class_CapsuleMesh_get_radial_segments>`  **(** **)** const                           |
-+----------------------------+----------------------------------------------------------------------------------------------------------------+
-| :ref:`float<class_float>`  | :ref:`get_radius<class_CapsuleMesh_get_radius>`  **(** **)** const                                             |
-+----------------------------+----------------------------------------------------------------------------------------------------------------+
-| :ref:`int<class_int>`      | :ref:`get_rings<class_CapsuleMesh_get_rings>`  **(** **)** const                                               |
-+----------------------------+----------------------------------------------------------------------------------------------------------------+
-| void                       | :ref:`set_mid_height<class_CapsuleMesh_set_mid_height>`  **(** :ref:`float<class_float>` mid_height  **)**     |
-+----------------------------+----------------------------------------------------------------------------------------------------------------+
-| void                       | :ref:`set_radial_segments<class_CapsuleMesh_set_radial_segments>`  **(** :ref:`int<class_int>` segments  **)** |
-+----------------------------+----------------------------------------------------------------------------------------------------------------+
-| void                       | :ref:`set_radius<class_CapsuleMesh_set_radius>`  **(** :ref:`float<class_float>` radius  **)**                 |
-+----------------------------+----------------------------------------------------------------------------------------------------------------+
-| void                       | :ref:`set_rings<class_CapsuleMesh_set_rings>`  **(** :ref:`int<class_int>` rings  **)**                        |
-+----------------------------+----------------------------------------------------------------------------------------------------------------+
++----------------------------+--------------------------------------------------------------------------------------------------------------+
+| :ref:`float<class_float>`  | :ref:`get_mid_height<class_CapsuleMesh_get_mid_height>` **(** **)** const                                    |
++----------------------------+--------------------------------------------------------------------------------------------------------------+
+| :ref:`int<class_int>`      | :ref:`get_radial_segments<class_CapsuleMesh_get_radial_segments>` **(** **)** const                          |
++----------------------------+--------------------------------------------------------------------------------------------------------------+
+| :ref:`float<class_float>`  | :ref:`get_radius<class_CapsuleMesh_get_radius>` **(** **)** const                                            |
++----------------------------+--------------------------------------------------------------------------------------------------------------+
+| :ref:`int<class_int>`      | :ref:`get_rings<class_CapsuleMesh_get_rings>` **(** **)** const                                              |
++----------------------------+--------------------------------------------------------------------------------------------------------------+
+| void                       | :ref:`set_mid_height<class_CapsuleMesh_set_mid_height>` **(** :ref:`float<class_float>` mid_height **)**     |
++----------------------------+--------------------------------------------------------------------------------------------------------------+
+| void                       | :ref:`set_radial_segments<class_CapsuleMesh_set_radial_segments>` **(** :ref:`int<class_int>` segments **)** |
++----------------------------+--------------------------------------------------------------------------------------------------------------+
+| void                       | :ref:`set_radius<class_CapsuleMesh_set_radius>` **(** :ref:`float<class_float>` radius **)**                 |
++----------------------------+--------------------------------------------------------------------------------------------------------------+
+| void                       | :ref:`set_rings<class_CapsuleMesh_set_rings>` **(** :ref:`int<class_int>` rings **)**                        |
++----------------------------+--------------------------------------------------------------------------------------------------------------+
 
 Member Variables
 ----------------
 
+  .. _class_CapsuleMesh_mid_height:
+
 - :ref:`float<class_float>` **mid_height** - Height of the capsule mesh from the center point. Defaults to 1.0.
+
+  .. _class_CapsuleMesh_radial_segments:
+
 - :ref:`int<class_int>` **radial_segments** - Number of radial segments on the capsule mesh. Defaults to 64.
+
+  .. _class_CapsuleMesh_radius:
+
 - :ref:`float<class_float>` **radius** - Radius of the capsule mesh. Defaults to 1.0.
+
+  .. _class_CapsuleMesh_rings:
+
 - :ref:`int<class_int>` **rings** - Number of rings along the height of the capsule. Defaults to 8.
+
 
 Description
 -----------
@@ -55,34 +67,34 @@ Member Function Description
 
 .. _class_CapsuleMesh_get_mid_height:
 
-- :ref:`float<class_float>`  **get_mid_height**  **(** **)** const
+- :ref:`float<class_float>` **get_mid_height** **(** **)** const
 
 .. _class_CapsuleMesh_get_radial_segments:
 
-- :ref:`int<class_int>`  **get_radial_segments**  **(** **)** const
+- :ref:`int<class_int>` **get_radial_segments** **(** **)** const
 
 .. _class_CapsuleMesh_get_radius:
 
-- :ref:`float<class_float>`  **get_radius**  **(** **)** const
+- :ref:`float<class_float>` **get_radius** **(** **)** const
 
 .. _class_CapsuleMesh_get_rings:
 
-- :ref:`int<class_int>`  **get_rings**  **(** **)** const
+- :ref:`int<class_int>` **get_rings** **(** **)** const
 
 .. _class_CapsuleMesh_set_mid_height:
 
-- void  **set_mid_height**  **(** :ref:`float<class_float>` mid_height  **)**
+- void **set_mid_height** **(** :ref:`float<class_float>` mid_height **)**
 
 .. _class_CapsuleMesh_set_radial_segments:
 
-- void  **set_radial_segments**  **(** :ref:`int<class_int>` segments  **)**
+- void **set_radial_segments** **(** :ref:`int<class_int>` segments **)**
 
 .. _class_CapsuleMesh_set_radius:
 
-- void  **set_radius**  **(** :ref:`float<class_float>` radius  **)**
+- void **set_radius** **(** :ref:`float<class_float>` radius **)**
 
 .. _class_CapsuleMesh_set_rings:
 
-- void  **set_rings**  **(** :ref:`int<class_int>` rings  **)**
+- void **set_rings** **(** :ref:`int<class_int>` rings **)**
 
 

@@ -19,44 +19,77 @@ Collision data for KinematicBody2D collisions.
 Member Functions
 ----------------
 
-+--------------------------------+-------------------------------------------------------------------------------------------------------+
-| :ref:`Object<class_object>`    | :ref:`get_collider<class_KinematicCollision_get_collider>`  **(** **)** const                         |
-+--------------------------------+-------------------------------------------------------------------------------------------------------+
-| :ref:`int<class_int>`          | :ref:`get_collider_id<class_KinematicCollision_get_collider_id>`  **(** **)** const                   |
-+--------------------------------+-------------------------------------------------------------------------------------------------------+
-| :ref:`Variant<class_variant>`  | :ref:`get_collider_metadata<class_KinematicCollision_get_collider_metadata>`  **(** **)** const       |
-+--------------------------------+-------------------------------------------------------------------------------------------------------+
-| :ref:`Object<class_object>`    | :ref:`get_collider_shape<class_KinematicCollision_get_collider_shape>`  **(** **)** const             |
-+--------------------------------+-------------------------------------------------------------------------------------------------------+
-| :ref:`int<class_int>`          | :ref:`get_collider_shape_index<class_KinematicCollision_get_collider_shape_index>`  **(** **)** const |
-+--------------------------------+-------------------------------------------------------------------------------------------------------+
-| :ref:`Vector3<class_vector3>`  | :ref:`get_collider_velocity<class_KinematicCollision_get_collider_velocity>`  **(** **)** const       |
-+--------------------------------+-------------------------------------------------------------------------------------------------------+
-| :ref:`Object<class_object>`    | :ref:`get_local_shape<class_KinematicCollision_get_local_shape>`  **(** **)** const                   |
-+--------------------------------+-------------------------------------------------------------------------------------------------------+
-| :ref:`Vector3<class_vector3>`  | :ref:`get_normal<class_KinematicCollision_get_normal>`  **(** **)** const                             |
-+--------------------------------+-------------------------------------------------------------------------------------------------------+
-| :ref:`Vector3<class_vector3>`  | :ref:`get_position<class_KinematicCollision_get_position>`  **(** **)** const                         |
-+--------------------------------+-------------------------------------------------------------------------------------------------------+
-| :ref:`Vector3<class_vector3>`  | :ref:`get_remainder<class_KinematicCollision_get_remainder>`  **(** **)** const                       |
-+--------------------------------+-------------------------------------------------------------------------------------------------------+
-| :ref:`Vector3<class_vector3>`  | :ref:`get_travel<class_KinematicCollision_get_travel>`  **(** **)** const                             |
-+--------------------------------+-------------------------------------------------------------------------------------------------------+
++--------------------------------+------------------------------------------------------------------------------------------------------+
+| :ref:`Object<class_object>`    | :ref:`get_collider<class_KinematicCollision_get_collider>` **(** **)** const                         |
++--------------------------------+------------------------------------------------------------------------------------------------------+
+| :ref:`int<class_int>`          | :ref:`get_collider_id<class_KinematicCollision_get_collider_id>` **(** **)** const                   |
++--------------------------------+------------------------------------------------------------------------------------------------------+
+| :ref:`Variant<class_variant>`  | :ref:`get_collider_metadata<class_KinematicCollision_get_collider_metadata>` **(** **)** const       |
++--------------------------------+------------------------------------------------------------------------------------------------------+
+| :ref:`Object<class_object>`    | :ref:`get_collider_shape<class_KinematicCollision_get_collider_shape>` **(** **)** const             |
++--------------------------------+------------------------------------------------------------------------------------------------------+
+| :ref:`int<class_int>`          | :ref:`get_collider_shape_index<class_KinematicCollision_get_collider_shape_index>` **(** **)** const |
++--------------------------------+------------------------------------------------------------------------------------------------------+
+| :ref:`Vector3<class_vector3>`  | :ref:`get_collider_velocity<class_KinematicCollision_get_collider_velocity>` **(** **)** const       |
++--------------------------------+------------------------------------------------------------------------------------------------------+
+| :ref:`Object<class_object>`    | :ref:`get_local_shape<class_KinematicCollision_get_local_shape>` **(** **)** const                   |
++--------------------------------+------------------------------------------------------------------------------------------------------+
+| :ref:`Vector3<class_vector3>`  | :ref:`get_normal<class_KinematicCollision_get_normal>` **(** **)** const                             |
++--------------------------------+------------------------------------------------------------------------------------------------------+
+| :ref:`Vector3<class_vector3>`  | :ref:`get_position<class_KinematicCollision_get_position>` **(** **)** const                         |
++--------------------------------+------------------------------------------------------------------------------------------------------+
+| :ref:`Vector3<class_vector3>`  | :ref:`get_remainder<class_KinematicCollision_get_remainder>` **(** **)** const                       |
++--------------------------------+------------------------------------------------------------------------------------------------------+
+| :ref:`Vector3<class_vector3>`  | :ref:`get_travel<class_KinematicCollision_get_travel>` **(** **)** const                             |
++--------------------------------+------------------------------------------------------------------------------------------------------+
 
 Member Variables
 ----------------
 
+  .. _class_KinematicCollision_collider:
+
 - :ref:`Object<class_object>` **collider** - The colliding body.
-- :ref:`int<class_int>` **collider_id** - The colliding body's unique [RID].
-- :ref:`Variant<class_variant>` **collider_metadata** - The colliding body's metadata. See [Object].
+
+  .. _class_KinematicCollision_collider_id:
+
+- :ref:`int<class_int>` **collider_id** - The colliding body's unique :ref:`RID<class_rid>`.
+
+  .. _class_KinematicCollision_collider_metadata:
+
+- :ref:`Variant<class_variant>` **collider_metadata** - The colliding body's metadata. See :ref:`Object<class_object>`.
+
+  .. _class_KinematicCollision_collider_shape:
+
 - :ref:`Object<class_object>` **collider_shape** - The colliding body's shape.
-- :ref:`int<class_int>` **collider_shape_index** - The colliding shape's index. See [CollisionObject].
+
+  .. _class_KinematicCollision_collider_shape_index:
+
+- :ref:`int<class_int>` **collider_shape_index** - The colliding shape's index. See :ref:`CollisionObject<class_collisionobject>`.
+
+  .. _class_KinematicCollision_collider_velocity:
+
 - :ref:`Vector3<class_vector3>` **collider_velocity** - The colliding object's velocity.
+
+  .. _class_KinematicCollision_local_shape:
+
 - :ref:`Object<class_object>` **local_shape** - The moving object's colliding shape.
+
+  .. _class_KinematicCollision_normal:
+
 - :ref:`Vector3<class_vector3>` **normal** - The colliding body's shape's normal at the point of collision.
+
+  .. _class_KinematicCollision_position:
+
 - :ref:`Vector3<class_vector3>` **position** - The point of collision.
+
+  .. _class_KinematicCollision_remainder:
+
 - :ref:`Vector3<class_vector3>` **remainder** - The moving object's remaining movement vector.
+
+  .. _class_KinematicCollision_travel:
+
 - :ref:`Vector3<class_vector3>` **travel** - The distance the moving object traveled before collision.
+
 
 Description
 -----------
@@ -70,46 +103,46 @@ Member Function Description
 
 .. _class_KinematicCollision_get_collider:
 
-- :ref:`Object<class_object>`  **get_collider**  **(** **)** const
+- :ref:`Object<class_object>` **get_collider** **(** **)** const
 
 .. _class_KinematicCollision_get_collider_id:
 
-- :ref:`int<class_int>`  **get_collider_id**  **(** **)** const
+- :ref:`int<class_int>` **get_collider_id** **(** **)** const
 
 .. _class_KinematicCollision_get_collider_metadata:
 
-- :ref:`Variant<class_variant>`  **get_collider_metadata**  **(** **)** const
+- :ref:`Variant<class_variant>` **get_collider_metadata** **(** **)** const
 
 .. _class_KinematicCollision_get_collider_shape:
 
-- :ref:`Object<class_object>`  **get_collider_shape**  **(** **)** const
+- :ref:`Object<class_object>` **get_collider_shape** **(** **)** const
 
 .. _class_KinematicCollision_get_collider_shape_index:
 
-- :ref:`int<class_int>`  **get_collider_shape_index**  **(** **)** const
+- :ref:`int<class_int>` **get_collider_shape_index** **(** **)** const
 
 .. _class_KinematicCollision_get_collider_velocity:
 
-- :ref:`Vector3<class_vector3>`  **get_collider_velocity**  **(** **)** const
+- :ref:`Vector3<class_vector3>` **get_collider_velocity** **(** **)** const
 
 .. _class_KinematicCollision_get_local_shape:
 
-- :ref:`Object<class_object>`  **get_local_shape**  **(** **)** const
+- :ref:`Object<class_object>` **get_local_shape** **(** **)** const
 
 .. _class_KinematicCollision_get_normal:
 
-- :ref:`Vector3<class_vector3>`  **get_normal**  **(** **)** const
+- :ref:`Vector3<class_vector3>` **get_normal** **(** **)** const
 
 .. _class_KinematicCollision_get_position:
 
-- :ref:`Vector3<class_vector3>`  **get_position**  **(** **)** const
+- :ref:`Vector3<class_vector3>` **get_position** **(** **)** const
 
 .. _class_KinematicCollision_get_remainder:
 
-- :ref:`Vector3<class_vector3>`  **get_remainder**  **(** **)** const
+- :ref:`Vector3<class_vector3>` **get_remainder** **(** **)** const
 
 .. _class_KinematicCollision_get_travel:
 
-- :ref:`Vector3<class_vector3>`  **get_travel**  **(** **)** const
+- :ref:`Vector3<class_vector3>` **get_travel** **(** **)** const
 
 

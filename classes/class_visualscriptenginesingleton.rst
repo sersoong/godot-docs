@@ -14,31 +14,39 @@ VisualScriptEngineSingleton
 Brief Description
 -----------------
 
-
+A Visual Script node returning a singleton from @GlobalScope
 
 Member Functions
 ----------------
 
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| :ref:`String<class_string>`  | :ref:`get_singleton<class_VisualScriptEngineSingleton_get_singleton>`  **(** **)**                                   |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| void                         | :ref:`set_singleton<class_VisualScriptEngineSingleton_set_singleton>`  **(** :ref:`String<class_string>` name  **)** |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
++------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| :ref:`String<class_string>`  | :ref:`get_singleton<class_VisualScriptEngineSingleton_get_singleton>` **(** **)**                                  |
++------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| void                         | :ref:`set_singleton<class_VisualScriptEngineSingleton_set_singleton>` **(** :ref:`String<class_string>` name **)** |
++------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
 Member Variables
 ----------------
 
-- :ref:`String<class_string>` **constant**
+  .. _class_VisualScriptEngineSingleton_constant:
+
+- :ref:`String<class_string>` **constant** - The singleton's name.
+
+
+Description
+-----------
+
+A Visual Script node returning a singleton from @GlobalScope
 
 Member Function Description
 ---------------------------
 
 .. _class_VisualScriptEngineSingleton_get_singleton:
 
-- :ref:`String<class_string>`  **get_singleton**  **(** **)**
+- :ref:`String<class_string>` **get_singleton** **(** **)**
 
 .. _class_VisualScriptEngineSingleton_set_singleton:
 
-- void  **set_singleton**  **(** :ref:`String<class_string>` name  **)**
+- void **set_singleton** **(** :ref:`String<class_string>` name **)**
 
 

@@ -6,7 +6,7 @@ Scenes and nodes
 Introduction
 ------------
 
-.. image:: /img/chef.png
+.. image:: img/chef.png
 
 Imagine for a second that you are not a game developer anymore. Instead,
 you're a chef! Change your hipster outfit for a toque and a double
@@ -28,16 +28,17 @@ other nodes display 3D models, etc. There are dozens of them.
 Nodes
 -----
 
-But let's start with the basics. A node is a fundamental building block for
-creating a game. A node:
+But let's start with the basics. Nodes are fundamental building blocks for
+creating a game. As mentioned above, a node can perform a variety of specialized 
+functions. However, any given node always has the following attributes:
 
--  Has a name.
--  Has editable properties.
--  Can receive a callback to process every frame.
--  Can be extended (to have more functions).
--  Can be added to other nodes as children.
+-  It has a name.
+-  It has editable properties.
+-  It can receive a callback to process every frame.
+-  It can be extended (to have more functions).
+-  It can be added to other nodes as children.
 
-.. image:: /img/tree.png
+.. image:: img/tree.png
 
 The last one is very important. Nodes can have other nodes as
 children. When arranged in this way, the nodes become a **tree**.
@@ -50,13 +51,10 @@ Don't worry if this doesn't click yet. We will continue to explore this over
 the next few sections. The most important fact to remember for now is that
 nodes exist and can be arranged this way.
 
-Now that the concept of nodes has been defined, the next logical
-step is to explain what a scene is.
-
 Scenes
 ------
 
-.. image:: /img/scene_tree_example.png
+.. image:: img/scene_tree_example.png
 
 Now that the concept of nodes has been defined, the next logical
 step is to explain what a Scene is.
@@ -85,12 +83,12 @@ This will introduce us to using the editor.
 If you run the godot executable outside of a project, the Project Manager
 appears. This helps developers manage their projects.
 
-.. image:: /img/project_manager.png
+.. image:: img/project_manager.png
 
 To create a new project, click the "New Project" option. Choose and create a
 path for the project and specify the project name "New Project":
 
-.. image:: /img/create_new_project.png
+.. image:: img/create_new_project.png
 
 Editor
 ------
@@ -98,7 +96,7 @@ Editor
 Once you've created the "New Project", then open it. This will open the Godot
 editor:
 
-.. image:: /img/empty_editor.png
+.. image:: img/empty_editor.png
 
 As mentioned before, making games in Godot feels like being in a
 kitchen, so let's open the refrigerator and add some fresh nodes to the
@@ -107,21 +105,21 @@ screen.
 
 To do this, press the "New Node" button (which looks like a plus symbol):
 
-.. image:: /img/newnode_button.png
+.. image:: img/newnode_button.png
 
 This will open the Create Node dialog, showing the long list of nodes
 that can be created:
 
-.. image:: /img/node_classes.png
+.. image:: img/node_classes.png
 
 From there, select the "Label" node first. Searching for it is probably
 the quickest way:
 
-.. image:: /img/node_search_label.png
+.. image:: img/node_search_label.png
 
 And finally, create the Label! A lot happens when Create is pressed:
 
-.. image:: /img/editor_with_label.png
+.. image:: img/editor_with_label.png
 
 First of all, the scene changes to the 2D editor (because Label is a 2D Node
 type), and the Label appears, selected, at the top left corner of the viewport.
@@ -133,21 +131,21 @@ right side).
 The next step will be to change the "Text" Property of the label. Let's
 change it to "Hello, World!":
 
-.. image:: /img/hw.png
+.. image:: img/hw.png
 
 Ok, everything's ready to run the scene! Press the PLAY SCENE Button on
 the top bar (or hit F6):
 
-.. image:: /img/playscene.png
+.. image:: img/playscene.png
 
 Aaaand... Oops.
 
-.. image:: /img/neversaved.png
+.. image:: img/neversaved.png
 
 Scenes need to be saved to be run, so save the scene to something like
 hello.tscn in Scene -> Save:
 
-.. image:: /img/save_scene.png
+.. image:: img/save_scene.png
 
 And here's when something funny happens. The file dialog is a special
 file dialog, and only allows you to save inside the project. The project
@@ -160,7 +158,7 @@ resource files are from inside the game.
 After saving the scene and pressing run scene again, the "Hello, World!"
 demo should finally execute:
 
-.. image:: /img/helloworld.png
+.. image:: img/helloworld.png
 
 Success!
 
@@ -185,7 +183,7 @@ To access that dialog, select Project -> Project Settings. Try it now.
 Once the window opens, let's select a main scene. Locate the
 `Application/Run/Main Scene` property and click on it to select 'hello.tscn'.
 
-.. image:: /img/main_scene.png
+.. image:: img/main_scene.png
 
 Now, with this change, when you press the regular Play button (or F5), this
 scene will run, no matter which scene is actively being edited.
@@ -195,10 +193,8 @@ project.godot file and shows their default values. If you change a value, a
 tick is marked to the left of its name. This means that the property will be
 saved to the project.godot file and remembered.
 
-As a side note, it is possible to add custom configuration options and read
-them at run-time using the :ref:`ProjectSettings <class_ProjectSettings>`
-singleton. This is not something you need to worry about now (this is the
-first tutorial after all!), but we mention it for future reference.
+As a side note, it is also possible to add custom configuration options and 
+read them in at run-time using the :ref:`ProjectSettings <class_ProjectSettings>` singleton.
 
 To be continued...
 ------------------

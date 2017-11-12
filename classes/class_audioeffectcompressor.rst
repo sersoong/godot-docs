@@ -14,109 +14,147 @@ AudioEffectCompressor
 Brief Description
 -----------------
 
+Adds a Compressor audio effect to an Audio bus.
 
+Reduces sounds that exceed a certain threshold level, smooths out the dynamics and increases the overall volume.
 
 Member Functions
 ----------------
 
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| :ref:`float<class_float>`    | :ref:`get_attack_us<class_AudioEffectCompressor_get_attack_us>`  **(** **)** const                                   |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| :ref:`float<class_float>`    | :ref:`get_gain<class_AudioEffectCompressor_get_gain>`  **(** **)** const                                             |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| :ref:`float<class_float>`    | :ref:`get_mix<class_AudioEffectCompressor_get_mix>`  **(** **)** const                                               |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| :ref:`float<class_float>`    | :ref:`get_ratio<class_AudioEffectCompressor_get_ratio>`  **(** **)** const                                           |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| :ref:`float<class_float>`    | :ref:`get_release_ms<class_AudioEffectCompressor_get_release_ms>`  **(** **)** const                                 |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| :ref:`String<class_string>`  | :ref:`get_sidechain<class_AudioEffectCompressor_get_sidechain>`  **(** **)** const                                   |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| :ref:`float<class_float>`    | :ref:`get_threshold<class_AudioEffectCompressor_get_threshold>`  **(** **)** const                                   |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| void                         | :ref:`set_attack_us<class_AudioEffectCompressor_set_attack_us>`  **(** :ref:`float<class_float>` attack_us  **)**    |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| void                         | :ref:`set_gain<class_AudioEffectCompressor_set_gain>`  **(** :ref:`float<class_float>` gain  **)**                   |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| void                         | :ref:`set_mix<class_AudioEffectCompressor_set_mix>`  **(** :ref:`float<class_float>` mix  **)**                      |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| void                         | :ref:`set_ratio<class_AudioEffectCompressor_set_ratio>`  **(** :ref:`float<class_float>` ratio  **)**                |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| void                         | :ref:`set_release_ms<class_AudioEffectCompressor_set_release_ms>`  **(** :ref:`float<class_float>` release_ms  **)** |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| void                         | :ref:`set_sidechain<class_AudioEffectCompressor_set_sidechain>`  **(** :ref:`String<class_string>` sidechain  **)**  |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| void                         | :ref:`set_threshold<class_AudioEffectCompressor_set_threshold>`  **(** :ref:`float<class_float>` threshold  **)**    |
-+------------------------------+----------------------------------------------------------------------------------------------------------------------+
++------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| :ref:`float<class_float>`    | :ref:`get_attack_us<class_AudioEffectCompressor_get_attack_us>` **(** **)** const                                  |
++------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| :ref:`float<class_float>`    | :ref:`get_gain<class_AudioEffectCompressor_get_gain>` **(** **)** const                                            |
++------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| :ref:`float<class_float>`    | :ref:`get_mix<class_AudioEffectCompressor_get_mix>` **(** **)** const                                              |
++------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| :ref:`float<class_float>`    | :ref:`get_ratio<class_AudioEffectCompressor_get_ratio>` **(** **)** const                                          |
++------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| :ref:`float<class_float>`    | :ref:`get_release_ms<class_AudioEffectCompressor_get_release_ms>` **(** **)** const                                |
++------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| :ref:`String<class_string>`  | :ref:`get_sidechain<class_AudioEffectCompressor_get_sidechain>` **(** **)** const                                  |
++------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| :ref:`float<class_float>`    | :ref:`get_threshold<class_AudioEffectCompressor_get_threshold>` **(** **)** const                                  |
++------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| void                         | :ref:`set_attack_us<class_AudioEffectCompressor_set_attack_us>` **(** :ref:`float<class_float>` attack_us **)**    |
++------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| void                         | :ref:`set_gain<class_AudioEffectCompressor_set_gain>` **(** :ref:`float<class_float>` gain **)**                   |
++------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| void                         | :ref:`set_mix<class_AudioEffectCompressor_set_mix>` **(** :ref:`float<class_float>` mix **)**                      |
++------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| void                         | :ref:`set_ratio<class_AudioEffectCompressor_set_ratio>` **(** :ref:`float<class_float>` ratio **)**                |
++------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| void                         | :ref:`set_release_ms<class_AudioEffectCompressor_set_release_ms>` **(** :ref:`float<class_float>` release_ms **)** |
++------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| void                         | :ref:`set_sidechain<class_AudioEffectCompressor_set_sidechain>` **(** :ref:`String<class_string>` sidechain **)**  |
++------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| void                         | :ref:`set_threshold<class_AudioEffectCompressor_set_threshold>` **(** :ref:`float<class_float>` threshold **)**    |
++------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
 Member Variables
 ----------------
 
-- :ref:`float<class_float>` **attack_us**
-- :ref:`float<class_float>` **gain**
-- :ref:`float<class_float>` **mix**
-- :ref:`float<class_float>` **ratio**
-- :ref:`float<class_float>` **release_ms**
-- :ref:`String<class_string>` **sidechain**
-- :ref:`float<class_float>` **threshold**
+  .. _class_AudioEffectCompressor_attack_us:
+
+- :ref:`float<class_float>` **attack_us** - Compressor's reaction time when the signal exceeds the threshold. Value can range from 20 to 2000. Default value: ``20ms``.
+
+  .. _class_AudioEffectCompressor_gain:
+
+- :ref:`float<class_float>` **gain** - Gain applied to the output signal.
+
+  .. _class_AudioEffectCompressor_mix:
+
+- :ref:`float<class_float>` **mix** - Balance between original signal and effect signal. Value can range from 0 (totally dry) to 1 (totally wet). Default value: ``1``.
+
+  .. _class_AudioEffectCompressor_ratio:
+
+- :ref:`float<class_float>` **ratio** - Amount of compression applied to the audio once it passes the threshold level. The higher the ratio the more the loud parts of the audio will be compressed. Value can range from 1 to 48. Default value: ``4``.
+
+  .. _class_AudioEffectCompressor_release_ms:
+
+- :ref:`float<class_float>` **release_ms** - Compressor's delay time to stop reducing the signal after the signal level falls below the threshold. Value can range from 20 to 2000. Default value: ``250ms``.
+
+  .. _class_AudioEffectCompressor_sidechain:
+
+- :ref:`String<class_string>` **sidechain** - Reduce the sound level using another audio bus for threshold detection.
+
+  .. _class_AudioEffectCompressor_threshold:
+
+- :ref:`float<class_float>` **threshold** - The level above which compression is applied to the audio. Value can range from -60 to 0. Default value: ``0``.
+
+
+Description
+-----------
+
+Dynamic range compressor reduces the level of the sound when the amplitude goes over a certain threshold in Decibels. One of the main uses of a compressor is to increase the dynamic range by clipping as little as possible (when sound goes over 0dB).
+
+Compressor has many uses in the mix:
+
+- In the Master bus to compress the whole output (Although a :ref:`AudioEffectLimiter<class_audioeffectlimiter>` is probably better)
+
+- In voice channels to ensure they sound as balanced as possible.
+
+- Sidechained. Sidechained, which can reduce the sound level sidechained with another audio bus for threshold detection.. This technique is very common in video game mixing to download the level of Music/SFX while voices are being heard.
+
+- Accentuates transients by using a wider attack, making effects sound more punchy.
 
 Member Function Description
 ---------------------------
 
 .. _class_AudioEffectCompressor_get_attack_us:
 
-- :ref:`float<class_float>`  **get_attack_us**  **(** **)** const
+- :ref:`float<class_float>` **get_attack_us** **(** **)** const
 
 .. _class_AudioEffectCompressor_get_gain:
 
-- :ref:`float<class_float>`  **get_gain**  **(** **)** const
+- :ref:`float<class_float>` **get_gain** **(** **)** const
 
 .. _class_AudioEffectCompressor_get_mix:
 
-- :ref:`float<class_float>`  **get_mix**  **(** **)** const
+- :ref:`float<class_float>` **get_mix** **(** **)** const
 
 .. _class_AudioEffectCompressor_get_ratio:
 
-- :ref:`float<class_float>`  **get_ratio**  **(** **)** const
+- :ref:`float<class_float>` **get_ratio** **(** **)** const
 
 .. _class_AudioEffectCompressor_get_release_ms:
 
-- :ref:`float<class_float>`  **get_release_ms**  **(** **)** const
+- :ref:`float<class_float>` **get_release_ms** **(** **)** const
 
 .. _class_AudioEffectCompressor_get_sidechain:
 
-- :ref:`String<class_string>`  **get_sidechain**  **(** **)** const
+- :ref:`String<class_string>` **get_sidechain** **(** **)** const
 
 .. _class_AudioEffectCompressor_get_threshold:
 
-- :ref:`float<class_float>`  **get_threshold**  **(** **)** const
+- :ref:`float<class_float>` **get_threshold** **(** **)** const
 
 .. _class_AudioEffectCompressor_set_attack_us:
 
-- void  **set_attack_us**  **(** :ref:`float<class_float>` attack_us  **)**
+- void **set_attack_us** **(** :ref:`float<class_float>` attack_us **)**
 
 .. _class_AudioEffectCompressor_set_gain:
 
-- void  **set_gain**  **(** :ref:`float<class_float>` gain  **)**
+- void **set_gain** **(** :ref:`float<class_float>` gain **)**
 
 .. _class_AudioEffectCompressor_set_mix:
 
-- void  **set_mix**  **(** :ref:`float<class_float>` mix  **)**
+- void **set_mix** **(** :ref:`float<class_float>` mix **)**
 
 .. _class_AudioEffectCompressor_set_ratio:
 
-- void  **set_ratio**  **(** :ref:`float<class_float>` ratio  **)**
+- void **set_ratio** **(** :ref:`float<class_float>` ratio **)**
 
 .. _class_AudioEffectCompressor_set_release_ms:
 
-- void  **set_release_ms**  **(** :ref:`float<class_float>` release_ms  **)**
+- void **set_release_ms** **(** :ref:`float<class_float>` release_ms **)**
 
 .. _class_AudioEffectCompressor_set_sidechain:
 
-- void  **set_sidechain**  **(** :ref:`String<class_string>` sidechain  **)**
+- void **set_sidechain** **(** :ref:`String<class_string>` sidechain **)**
 
 .. _class_AudioEffectCompressor_set_threshold:
 
-- void  **set_threshold**  **(** :ref:`float<class_float>` threshold  **)**
+- void **set_threshold** **(** :ref:`float<class_float>` threshold **)**
 
 

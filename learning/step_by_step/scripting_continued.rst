@@ -6,9 +6,9 @@ Scripting (continued)
 Processing
 ----------
 
-Several actions in Godot are triggered by callbacks or virtual
-functions, so there is no need to check for writing code that runs all
-the time. Additionally, a lot can be done with animation players.
+Several actions in Godot are triggered by callbacks or virtual functions, 
+so there is no need to write code that runs all the time. Additionally, a 
+lot can be done with animation players.
 
 However, it is still a very common case to have a script process on every
 frame. There are two types of processing: idle processing and physics
@@ -26,16 +26,16 @@ frames per second (FPS) of the application:
     func _process(delta):
         # do something...
 
-The delta parameter describes the time elapsed (in seconds, as
+The delta parameter describes the time elapsed (in seconds, as a
 floating point) since the previous call to "_process()".
 
 Physics processing is similar, but it should be used for all the processes that
 must happen before each physics step. For example, to move a character.
-It is always runs before a physics step and it is called at fixed time intervals,
+It always runs before a physics step and it is called at fixed time intervals,
 60 times per second by default. Change the value in the Project Settings.
 
-The function _process() instead is not sync with physics, and its frame rate is not constant and depend by hardware and game optimization.
-Its execution is done after physics step on single thread games.
+The function _process() instead is not synced with physics. Its frame rate is not constant and dependent on hardware and game optimization.
+Its execution is done after the physics step on single thread games.
 
 A simple way to test this is to create a scene with a single Label node,
 with the following script:
@@ -48,7 +48,7 @@ with the following script:
 
     func _process(delta):
         accum += delta
-        text = (str(accum) # text is a built-in label property
+        text = str(accum) # text is a built-in label property
 
 Which will show a counter increasing each frame.
 
@@ -59,7 +59,7 @@ Nodes can be added to groups (as many as desired per node). This is a
 simple yet useful feature for organizing large scenes. There are two
 ways to do this: the first is from the UI, from the Groups button under the Node panel:
 
-.. image:: /img/groups_in_nodes.PNG
+.. image:: img/groups_in_nodes.PNG
 
 And the second from code. One useful example would be to tag scenes
 which are enemies.
@@ -165,8 +165,8 @@ As mentioned before, it's best to use these functions.
 Creating nodes
 --------------
 
-To create a node from code, just call the ".new()" method (like for any
-other class-based datatype). Example:
+To create a node from code, call the .new() method, just like for any 
+other class based datatype. Example:
 
 ::
 

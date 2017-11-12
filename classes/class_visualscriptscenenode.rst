@@ -14,31 +14,47 @@ VisualScriptSceneNode
 Brief Description
 -----------------
 
-
+Node reference.
 
 Member Functions
 ----------------
 
-+----------------------------------+--------------------------------------------------------------------------------------------------------------------+
-| :ref:`NodePath<class_nodepath>`  | :ref:`get_node_path<class_VisualScriptSceneNode_get_node_path>`  **(** **)**                                       |
-+----------------------------------+--------------------------------------------------------------------------------------------------------------------+
-| void                             | :ref:`set_node_path<class_VisualScriptSceneNode_set_node_path>`  **(** :ref:`NodePath<class_nodepath>` path  **)** |
-+----------------------------------+--------------------------------------------------------------------------------------------------------------------+
++----------------------------------+------------------------------------------------------------------------------------------------------------------+
+| :ref:`NodePath<class_nodepath>`  | :ref:`get_node_path<class_VisualScriptSceneNode_get_node_path>` **(** **)**                                      |
++----------------------------------+------------------------------------------------------------------------------------------------------------------+
+| void                             | :ref:`set_node_path<class_VisualScriptSceneNode_set_node_path>` **(** :ref:`NodePath<class_nodepath>` path **)** |
++----------------------------------+------------------------------------------------------------------------------------------------------------------+
 
 Member Variables
 ----------------
 
-- :ref:`NodePath<class_nodepath>` **node_path**
+  .. _class_VisualScriptSceneNode_node_path:
+
+- :ref:`NodePath<class_nodepath>` **node_path** - The node's path in the scene tree.
+
+
+Description
+-----------
+
+A direct reference to a node.
+
+**Input Ports:**
+
+none
+
+**Output Ports:**
+
+- Data: ``node`` (obj)
 
 Member Function Description
 ---------------------------
 
 .. _class_VisualScriptSceneNode_get_node_path:
 
-- :ref:`NodePath<class_nodepath>`  **get_node_path**  **(** **)**
+- :ref:`NodePath<class_nodepath>` **get_node_path** **(** **)**
 
 .. _class_VisualScriptSceneNode_set_node_path:
 
-- void  **set_node_path**  **(** :ref:`NodePath<class_nodepath>` path  **)**
+- void **set_node_path** **(** :ref:`NodePath<class_nodepath>` path **)**
 
 

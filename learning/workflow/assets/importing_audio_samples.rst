@@ -14,7 +14,7 @@ Each has different advantages.
 * Ogg Vorbis files use a stronger compression that results in much smaller file size, but uses significantly more processor to play back.
 
 
-.. image:: /img/audio_stram_import.png
+.. image:: img/audio_stream_import.png
 
 Here is a comparative chart.
 
@@ -32,7 +32,7 @@ Here is a comparative chart.
 | OGG Vorbis 96kbps, Stereo     | 12kb                |
 +-------------------------------+---------------------+
 
-In general, what is recommended, is to use WAV for most sound effects, specially those that are short and repetitive, and OGG for music, voice and long sound effects.
+In general, what is recommended, is to use WAV for most sound effects, especially those that are short and repetitive, and OGG for music, voice and long sound effects.
 
 Best Practices
 --------------
@@ -42,7 +42,7 @@ SFX artists the need to add reverb to the sound effects, reducing their
 size greatly and ensuring correct trimming. Say no to SFX with baked
 reverb!
 
-.. image:: /img/reverb.png
+.. image:: img/reverb.png
 
 As you can see above, sound effects become huge with reverb added.
 

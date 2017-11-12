@@ -14,77 +14,86 @@ Engine
 Brief Description
 -----------------
 
-
+Access to basic engine properties.
 
 Member Functions
 ----------------
 
-+--------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`int<class_int>`                | :ref:`get_frames_drawn<class_Engine_get_frames_drawn>`  **(** **)**                                                                |
-+--------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`float<class_float>`            | :ref:`get_frames_per_second<class_Engine_get_frames_per_second>`  **(** **)** const                                                |
-+--------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`int<class_int>`                | :ref:`get_iterations_per_second<class_Engine_get_iterations_per_second>`  **(** **)** const                                        |
-+--------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`MainLoop<class_mainloop>`      | :ref:`get_main_loop<class_Engine_get_main_loop>`  **(** **)** const                                                                |
-+--------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`float<class_float>`            | :ref:`get_target_fps<class_Engine_get_target_fps>`  **(** **)** const                                                              |
-+--------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`float<class_float>`            | :ref:`get_time_scale<class_Engine_get_time_scale>`  **(** **)**                                                                    |
-+--------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`Dictionary<class_dictionary>`  | :ref:`get_version_info<class_Engine_get_version_info>`  **(** **)** const                                                          |
-+--------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`bool<class_bool>`              | :ref:`is_editor_hint<class_Engine_is_editor_hint>`  **(** **)** const                                                              |
-+--------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`bool<class_bool>`              | :ref:`is_in_fixed_frame<class_Engine_is_in_fixed_frame>`  **(** **)** const                                                        |
-+--------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| void                                 | :ref:`set_editor_hint<class_Engine_set_editor_hint>`  **(** :ref:`bool<class_bool>` enabled  **)**                                 |
-+--------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| void                                 | :ref:`set_iterations_per_second<class_Engine_set_iterations_per_second>`  **(** :ref:`int<class_int>` iterations_per_second  **)** |
-+--------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| void                                 | :ref:`set_target_fps<class_Engine_set_target_fps>`  **(** :ref:`int<class_int>` target_fps  **)**                                  |
-+--------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-| void                                 | :ref:`set_time_scale<class_Engine_set_time_scale>`  **(** :ref:`float<class_float>` time_scale  **)**                              |
-+--------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`int<class_int>`                | :ref:`get_frames_drawn<class_Engine_get_frames_drawn>` **(** **)**                                                               |
++--------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`float<class_float>`            | :ref:`get_frames_per_second<class_Engine_get_frames_per_second>` **(** **)** const                                               |
++--------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`int<class_int>`                | :ref:`get_iterations_per_second<class_Engine_get_iterations_per_second>` **(** **)** const                                       |
++--------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`MainLoop<class_mainloop>`      | :ref:`get_main_loop<class_Engine_get_main_loop>` **(** **)** const                                                               |
++--------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`float<class_float>`            | :ref:`get_target_fps<class_Engine_get_target_fps>` **(** **)** const                                                             |
++--------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`float<class_float>`            | :ref:`get_time_scale<class_Engine_get_time_scale>` **(** **)**                                                                   |
++--------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`Dictionary<class_dictionary>`  | :ref:`get_version_info<class_Engine_get_version_info>` **(** **)** const                                                         |
++--------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`bool<class_bool>`              | :ref:`is_editor_hint<class_Engine_is_editor_hint>` **(** **)** const                                                             |
++--------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`bool<class_bool>`              | :ref:`is_in_physics_frame<class_Engine_is_in_physics_frame>` **(** **)** const                                                   |
++--------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+
+| void                                 | :ref:`set_editor_hint<class_Engine_set_editor_hint>` **(** :ref:`bool<class_bool>` enabled **)**                                 |
++--------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+
+| void                                 | :ref:`set_iterations_per_second<class_Engine_set_iterations_per_second>` **(** :ref:`int<class_int>` iterations_per_second **)** |
++--------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+
+| void                                 | :ref:`set_target_fps<class_Engine_set_target_fps>` **(** :ref:`int<class_int>` target_fps **)**                                  |
++--------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+
+| void                                 | :ref:`set_time_scale<class_Engine_set_time_scale>` **(** :ref:`float<class_float>` time_scale **)**                              |
++--------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+
+
+Description
+-----------
+
+The ``Engine`` class allows you to query and modify the game's run-time parameters, such as frames per second, time scale, and others.
 
 Member Function Description
 ---------------------------
 
 .. _class_Engine_get_frames_drawn:
 
-- :ref:`int<class_int>`  **get_frames_drawn**  **(** **)**
+- :ref:`int<class_int>` **get_frames_drawn** **(** **)**
 
-Return the total amount of frames drawn.
+Returns the total number of frames drawn.
 
 .. _class_Engine_get_frames_per_second:
 
-- :ref:`float<class_float>`  **get_frames_per_second**  **(** **)** const
+- :ref:`float<class_float>` **get_frames_per_second** **(** **)** const
 
 Returns the frames per second of the running game.
 
 .. _class_Engine_get_iterations_per_second:
 
-- :ref:`int<class_int>`  **get_iterations_per_second**  **(** **)** const
+- :ref:`int<class_int>` **get_iterations_per_second** **(** **)** const
 
-Return the amount of fixed iterations per second (for fixed process and physics).
+Returns the number of fixed iterations per second (for fixed process and physics).
 
 .. _class_Engine_get_main_loop:
 
-- :ref:`MainLoop<class_mainloop>`  **get_main_loop**  **(** **)** const
+- :ref:`MainLoop<class_mainloop>` **get_main_loop** **(** **)** const
 
-Return the main loop object (see :ref:`MainLoop<class_mainloop>` and :ref:`SceneTree<class_scenetree>`).
+Returns the main loop object (see :ref:`MainLoop<class_mainloop>` and :ref:`SceneTree<class_scenetree>`).
 
 .. _class_Engine_get_target_fps:
 
-- :ref:`float<class_float>`  **get_target_fps**  **(** **)** const
+- :ref:`float<class_float>` **get_target_fps** **(** **)** const
+
+Returns the desired frames per second. If the hardware cannot keep up, this setting may not be respected. It defaults to 0, which indicates no limit.
 
 .. _class_Engine_get_time_scale:
 
-- :ref:`float<class_float>`  **get_time_scale**  **(** **)**
+- :ref:`float<class_float>` **get_time_scale** **(** **)**
+
+Returns how fast or slow the in-game clock ticks versus the real life one. It defaults to 1.0. A value of 2.0 means the game moves twice as fast as real life, whilst a value of 0.5 means the game moves at half the regular speed.
 
 .. _class_Engine_get_version_info:
 
-- :ref:`Dictionary<class_dictionary>`  **get_version_info**  **(** **)** const
+- :ref:`Dictionary<class_dictionary>` **get_version_info** **(** **)** const
 
 Returns the current engine version information in a Dictionary.
 
@@ -104,28 +113,38 @@ Returns the current engine version information in a Dictionary.
 
 .. _class_Engine_is_editor_hint:
 
-- :ref:`bool<class_bool>`  **is_editor_hint**  **(** **)** const
+- :ref:`bool<class_bool>` **is_editor_hint** **(** **)** const
 
-.. _class_Engine_is_in_fixed_frame:
+Returns ``true`` if the editor is running.
 
-- :ref:`bool<class_bool>`  **is_in_fixed_frame**  **(** **)** const
+.. _class_Engine_is_in_physics_frame:
+
+- :ref:`bool<class_bool>` **is_in_physics_frame** **(** **)** const
+
+Returns ``true`` if the game is inside the fixed process and physics phase of the game loop.
 
 .. _class_Engine_set_editor_hint:
 
-- void  **set_editor_hint**  **(** :ref:`bool<class_bool>` enabled  **)**
+- void **set_editor_hint** **(** :ref:`bool<class_bool>` enabled **)**
+
+Sets the running inside the editor hint if ``enabled`` is ``true``.
 
 .. _class_Engine_set_iterations_per_second:
 
-- void  **set_iterations_per_second**  **(** :ref:`int<class_int>` iterations_per_second  **)**
+- void **set_iterations_per_second** **(** :ref:`int<class_int>` iterations_per_second **)**
 
-Set the amount of fixed iterations per second (for fixed process and physics).
+Sets the number of fixed iterations per second (for fixed process and physics).
 
 .. _class_Engine_set_target_fps:
 
-- void  **set_target_fps**  **(** :ref:`int<class_int>` target_fps  **)**
+- void **set_target_fps** **(** :ref:`int<class_int>` target_fps **)**
+
+Sets the target frames per second.
 
 .. _class_Engine_set_time_scale:
 
-- void  **set_time_scale**  **(** :ref:`float<class_float>` time_scale  **)**
+- void **set_time_scale** **(** :ref:`float<class_float>` time_scale **)**
+
+Sets the time scale.
 
 

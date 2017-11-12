@@ -14,40 +14,41 @@ AudioEffectAmplify
 Brief Description
 -----------------
 
-Amplifies the volume of an audio source.
+Adds a Amplify audio effect to an Audio bus.
+
+Increases or decreases the volume of the selected audio bus.
 
 Member Functions
 ----------------
 
-+----------------------------+-------------------------------------------------------------------------------------------------------------+
-| :ref:`float<class_float>`  | :ref:`get_volume_db<class_AudioEffectAmplify_get_volume_db>`  **(** **)** const                             |
-+----------------------------+-------------------------------------------------------------------------------------------------------------+
-| void                       | :ref:`set_volume_db<class_AudioEffectAmplify_set_volume_db>`  **(** :ref:`float<class_float>` volume  **)** |
-+----------------------------+-------------------------------------------------------------------------------------------------------------+
++----------------------------+-----------------------------------------------------------------------------------------------------------+
+| :ref:`float<class_float>`  | :ref:`get_volume_db<class_AudioEffectAmplify_get_volume_db>` **(** **)** const                            |
++----------------------------+-----------------------------------------------------------------------------------------------------------+
+| void                       | :ref:`set_volume_db<class_AudioEffectAmplify_set_volume_db>` **(** :ref:`float<class_float>` volume **)** |
++----------------------------+-----------------------------------------------------------------------------------------------------------+
 
 Member Variables
 ----------------
 
-- :ref:`float<class_float>` **volume_db** - The effect's volume limit.
+  .. _class_AudioEffectAmplify_volume_db:
+
+- :ref:`float<class_float>` **volume_db** - Amount of amplification. Positive values make the sound louder, negative values make it quieter. Value can range from -80 to 24. Default value: ``0``.
+
 
 Description
 -----------
 
-Amplifies the volume of an audio source. Increase gain of the audio being routed through the bus.
+Increases or decreases the volume being routed through the audio bus.
 
 Member Function Description
 ---------------------------
 
 .. _class_AudioEffectAmplify_get_volume_db:
 
-- :ref:`float<class_float>`  **get_volume_db**  **(** **)** const
-
-Returns the set maximum volume.
+- :ref:`float<class_float>` **get_volume_db** **(** **)** const
 
 .. _class_AudioEffectAmplify_set_volume_db:
 
-- void  **set_volume_db**  **(** :ref:`float<class_float>` volume  **)**
-
-Sets the maximum volume.
+- void **set_volume_db** **(** :ref:`float<class_float>` volume **)**
 
 

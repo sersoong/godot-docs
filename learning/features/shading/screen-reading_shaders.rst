@@ -74,7 +74,7 @@ As a result, if shaders that use SCREEN_TEXTURE overlap, the second one
 will not use the result of the first one, resulting in unexpected
 visuals:
 
-.. image:: /img/texscreen_demo1.png
+.. image:: img/texscreen_demo1.png
 
 In the above image, the second sphere (top right) is using the same
 source for SCREEN_TEXTURE as the first one below, so the first one
@@ -87,11 +87,11 @@ In 2D this can be corrected via the :ref:`BackBufferCopy <class_BackBufferCopy>`
 node, which can be instantiated between both spheres. BackBufferCopy can work by
 either specifying a screen region or the whole screen:
 
-.. image:: /img/texscreen_bbc.png
+.. image:: img/texscreen_bbc.png
 
 With correct back-buffer copying, the two spheres blend correctly:
 
-.. image:: /img/texscreen_demo2.png
+.. image:: img/texscreen_demo2.png
 
 Back-buffer logic
 ~~~~~~~~~~~~~~~~~
@@ -117,7 +117,7 @@ Godot:
 
 
 DEPTH_TEXTURE
-~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 For 3D Shaders, it's also possible to access the screen depth buffer. For this,
 the DEPTH_TEXTURE built-in is used. This texture is not linear, it must be
@@ -130,6 +130,3 @@ The following code retrieves the 3D position below the pixel being drawn:
 	float depth = textureLod(DEPTH_TEXTURE,SCREEN_UV,0.0).r;
 	vec4 upos = INV_PROJECTION_MATRIX * vec4(SCREEN_UV*2.0-1.0,depth*2.0-1.0,1.0);
 	vec3 pixel_position = upos.xyz/upos.w;
-
-
-

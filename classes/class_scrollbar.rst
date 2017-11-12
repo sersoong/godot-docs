@@ -21,21 +21,27 @@ Base class for scroll bars.
 Member Functions
 ----------------
 
-+----------------------------+------------------------------------------------------------------------------------------------------+
-| :ref:`float<class_float>`  | :ref:`get_custom_step<class_ScrollBar_get_custom_step>`  **(** **)** const                           |
-+----------------------------+------------------------------------------------------------------------------------------------------+
-| void                       | :ref:`set_custom_step<class_ScrollBar_set_custom_step>`  **(** :ref:`float<class_float>` step  **)** |
-+----------------------------+------------------------------------------------------------------------------------------------------+
++----------------------------+----------------------------------------------------------------------------------------------------+
+| :ref:`float<class_float>`  | :ref:`get_custom_step<class_ScrollBar_get_custom_step>` **(** **)** const                          |
++----------------------------+----------------------------------------------------------------------------------------------------+
+| void                       | :ref:`set_custom_step<class_ScrollBar_set_custom_step>` **(** :ref:`float<class_float>` step **)** |
++----------------------------+----------------------------------------------------------------------------------------------------+
 
 Signals
 -------
 
--  **scrolling**  **(** **)**
+.. _class_ScrollBar_scrolling:
+
+- **scrolling** **(** **)**
+
 
 Member Variables
 ----------------
 
+  .. _class_ScrollBar_custom_step:
+
 - :ref:`float<class_float>` **custom_step**
+
 
 Description
 -----------
@@ -47,10 +53,10 @@ Member Function Description
 
 .. _class_ScrollBar_get_custom_step:
 
-- :ref:`float<class_float>`  **get_custom_step**  **(** **)** const
+- :ref:`float<class_float>` **get_custom_step** **(** **)** const
 
 .. _class_ScrollBar_set_custom_step:
 
-- void  **set_custom_step**  **(** :ref:`float<class_float>` step  **)**
+- void **set_custom_step** **(** :ref:`float<class_float>` step **)**
 
 

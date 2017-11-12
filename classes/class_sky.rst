@@ -21,16 +21,19 @@ Brief Description
 Member Functions
 ----------------
 
-+------------------------+------------------------------------------------------------------------------------------------+
-| :ref:`int<class_int>`  | :ref:`get_radiance_size<class_Sky_get_radiance_size>`  **(** **)** const                       |
-+------------------------+------------------------------------------------------------------------------------------------+
-| void                   | :ref:`set_radiance_size<class_Sky_set_radiance_size>`  **(** :ref:`int<class_int>` size  **)** |
-+------------------------+------------------------------------------------------------------------------------------------+
++------------------------+----------------------------------------------------------------------------------------------+
+| :ref:`int<class_int>`  | :ref:`get_radiance_size<class_Sky_get_radiance_size>` **(** **)** const                      |
++------------------------+----------------------------------------------------------------------------------------------+
+| void                   | :ref:`set_radiance_size<class_Sky_set_radiance_size>` **(** :ref:`int<class_int>` size **)** |
++------------------------+----------------------------------------------------------------------------------------------+
 
 Member Variables
 ----------------
 
+  .. _class_Sky_radiance_size:
+
 - :ref:`int<class_int>` **radiance_size**
+
 
 Numeric Constants
 -----------------
@@ -49,10 +52,10 @@ Member Function Description
 
 .. _class_Sky_get_radiance_size:
 
-- :ref:`int<class_int>`  **get_radiance_size**  **(** **)** const
+- :ref:`int<class_int>` **get_radiance_size** **(** **)** const
 
 .. _class_Sky_set_radiance_size:
 
-- void  **set_radiance_size**  **(** :ref:`int<class_int>` size  **)**
+- void **set_radiance_size** **(** :ref:`int<class_int>` size **)**
 
 

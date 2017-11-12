@@ -19,16 +19,19 @@ General purpose progress bar.
 Member Functions
 ----------------
 
-+--------------------------+-----------------------------------------------------------------------------------------------------------------+
-| :ref:`bool<class_bool>`  | :ref:`is_percent_visible<class_ProgressBar_is_percent_visible>`  **(** **)** const                              |
-+--------------------------+-----------------------------------------------------------------------------------------------------------------+
-| void                     | :ref:`set_percent_visible<class_ProgressBar_set_percent_visible>`  **(** :ref:`bool<class_bool>` visible  **)** |
-+--------------------------+-----------------------------------------------------------------------------------------------------------------+
++--------------------------+---------------------------------------------------------------------------------------------------------------+
+| :ref:`bool<class_bool>`  | :ref:`is_percent_visible<class_ProgressBar_is_percent_visible>` **(** **)** const                             |
++--------------------------+---------------------------------------------------------------------------------------------------------------+
+| void                     | :ref:`set_percent_visible<class_ProgressBar_set_percent_visible>` **(** :ref:`bool<class_bool>` visible **)** |
++--------------------------+---------------------------------------------------------------------------------------------------------------+
 
 Member Variables
 ----------------
 
+  .. _class_ProgressBar_percent_visible:
+
 - :ref:`bool<class_bool>` **percent_visible**
+
 
 Description
 -----------
@@ -40,10 +43,10 @@ Member Function Description
 
 .. _class_ProgressBar_is_percent_visible:
 
-- :ref:`bool<class_bool>`  **is_percent_visible**  **(** **)** const
+- :ref:`bool<class_bool>` **is_percent_visible** **(** **)** const
 
 .. _class_ProgressBar_set_percent_visible:
 
-- void  **set_percent_visible**  **(** :ref:`bool<class_bool>` visible  **)**
+- void **set_percent_visible** **(** :ref:`bool<class_bool>` visible **)**
 
 

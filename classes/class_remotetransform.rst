@@ -14,83 +14,105 @@ RemoteTransform
 Brief Description
 -----------------
 
-
+RemoteTransform mirrors the :ref:`Transform<class_transform>` of another :ref:`Spatial<class_spatial>` derived Node in the scene.
 
 Member Functions
 ----------------
 
-+----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`NodePath<class_nodepath>`  | :ref:`get_remote_node<class_RemoteTransform_get_remote_node>`  **(** **)** const                                                                 |
-+----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`bool<class_bool>`          | :ref:`get_update_position<class_RemoteTransform_get_update_position>`  **(** **)** const                                                         |
-+----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`bool<class_bool>`          | :ref:`get_update_rotation<class_RemoteTransform_get_update_rotation>`  **(** **)** const                                                         |
-+----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`bool<class_bool>`          | :ref:`get_update_scale<class_RemoteTransform_get_update_scale>`  **(** **)** const                                                               |
-+----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`bool<class_bool>`          | :ref:`get_use_global_coordinates<class_RemoteTransform_get_use_global_coordinates>`  **(** **)** const                                           |
-+----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-| void                             | :ref:`set_remote_node<class_RemoteTransform_set_remote_node>`  **(** :ref:`NodePath<class_nodepath>` path  **)**                                 |
-+----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-| void                             | :ref:`set_update_position<class_RemoteTransform_set_update_position>`  **(** :ref:`bool<class_bool>` update_remote_position  **)**               |
-+----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-| void                             | :ref:`set_update_rotation<class_RemoteTransform_set_update_rotation>`  **(** :ref:`bool<class_bool>` update_remote_rotation  **)**               |
-+----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-| void                             | :ref:`set_update_scale<class_RemoteTransform_set_update_scale>`  **(** :ref:`bool<class_bool>` update_remote_scale  **)**                        |
-+----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-| void                             | :ref:`set_use_global_coordinates<class_RemoteTransform_set_use_global_coordinates>`  **(** :ref:`bool<class_bool>` use_global_coordinates  **)** |
-+----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`NodePath<class_nodepath>`  | :ref:`get_remote_node<class_RemoteTransform_get_remote_node>` **(** **)** const                                                                |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`bool<class_bool>`          | :ref:`get_update_position<class_RemoteTransform_get_update_position>` **(** **)** const                                                        |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`bool<class_bool>`          | :ref:`get_update_rotation<class_RemoteTransform_get_update_rotation>` **(** **)** const                                                        |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`bool<class_bool>`          | :ref:`get_update_scale<class_RemoteTransform_get_update_scale>` **(** **)** const                                                              |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`bool<class_bool>`          | :ref:`get_use_global_coordinates<class_RemoteTransform_get_use_global_coordinates>` **(** **)** const                                          |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+
+| void                             | :ref:`set_remote_node<class_RemoteTransform_set_remote_node>` **(** :ref:`NodePath<class_nodepath>` path **)**                                 |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+
+| void                             | :ref:`set_update_position<class_RemoteTransform_set_update_position>` **(** :ref:`bool<class_bool>` update_remote_position **)**               |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+
+| void                             | :ref:`set_update_rotation<class_RemoteTransform_set_update_rotation>` **(** :ref:`bool<class_bool>` update_remote_rotation **)**               |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+
+| void                             | :ref:`set_update_scale<class_RemoteTransform_set_update_scale>` **(** :ref:`bool<class_bool>` update_remote_scale **)**                        |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+
+| void                             | :ref:`set_use_global_coordinates<class_RemoteTransform_set_use_global_coordinates>` **(** :ref:`bool<class_bool>` use_global_coordinates **)** |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Member Variables
 ----------------
 
-- :ref:`NodePath<class_nodepath>` **remote_path**
-- :ref:`bool<class_bool>` **update_position**
-- :ref:`bool<class_bool>` **update_rotation**
-- :ref:`bool<class_bool>` **update_scale**
-- :ref:`bool<class_bool>` **use_global_coordinates**
+  .. _class_RemoteTransform_remote_path:
+
+- :ref:`NodePath<class_nodepath>` **remote_path** - The remote node's :ref:`NodePath<class_nodepath>`.
+
+  .. _class_RemoteTransform_update_position:
+
+- :ref:`bool<class_bool>` **update_position** - If ``true`` the remote node's position is mirrored.
+
+  .. _class_RemoteTransform_update_rotation:
+
+- :ref:`bool<class_bool>` **update_rotation** - If ``true`` the remote node's rotation is mirrored.
+
+  .. _class_RemoteTransform_update_scale:
+
+- :ref:`bool<class_bool>` **update_scale** - If ``true`` the remote node's scale is mirrored.
+
+  .. _class_RemoteTransform_use_global_coordinates:
+
+- :ref:`bool<class_bool>` **use_global_coordinates** - If ``true`` global coordinates are used. If ``false`` local coordinates are used. Default value: ``true``.
+
+
+Description
+-----------
+
+RemoteTransform mirrors the :ref:`Transform<class_transform>` of another :ref:`Spatial<class_spatial>` derived Node (called the remote node) in the scene.
+
+It can be set to track another Node's position, rotation and/or scale and update its own accordingly, using either global or local coordinates.
 
 Member Function Description
 ---------------------------
 
 .. _class_RemoteTransform_get_remote_node:
 
-- :ref:`NodePath<class_nodepath>`  **get_remote_node**  **(** **)** const
+- :ref:`NodePath<class_nodepath>` **get_remote_node** **(** **)** const
 
 .. _class_RemoteTransform_get_update_position:
 
-- :ref:`bool<class_bool>`  **get_update_position**  **(** **)** const
+- :ref:`bool<class_bool>` **get_update_position** **(** **)** const
 
 .. _class_RemoteTransform_get_update_rotation:
 
-- :ref:`bool<class_bool>`  **get_update_rotation**  **(** **)** const
+- :ref:`bool<class_bool>` **get_update_rotation** **(** **)** const
 
 .. _class_RemoteTransform_get_update_scale:
 
-- :ref:`bool<class_bool>`  **get_update_scale**  **(** **)** const
+- :ref:`bool<class_bool>` **get_update_scale** **(** **)** const
 
 .. _class_RemoteTransform_get_use_global_coordinates:
 
-- :ref:`bool<class_bool>`  **get_use_global_coordinates**  **(** **)** const
+- :ref:`bool<class_bool>` **get_use_global_coordinates** **(** **)** const
 
 .. _class_RemoteTransform_set_remote_node:
 
-- void  **set_remote_node**  **(** :ref:`NodePath<class_nodepath>` path  **)**
+- void **set_remote_node** **(** :ref:`NodePath<class_nodepath>` path **)**
 
 .. _class_RemoteTransform_set_update_position:
 
-- void  **set_update_position**  **(** :ref:`bool<class_bool>` update_remote_position  **)**
+- void **set_update_position** **(** :ref:`bool<class_bool>` update_remote_position **)**
 
 .. _class_RemoteTransform_set_update_rotation:
 
-- void  **set_update_rotation**  **(** :ref:`bool<class_bool>` update_remote_rotation  **)**
+- void **set_update_rotation** **(** :ref:`bool<class_bool>` update_remote_rotation **)**
 
 .. _class_RemoteTransform_set_update_scale:
 
-- void  **set_update_scale**  **(** :ref:`bool<class_bool>` update_remote_scale  **)**
+- void **set_update_scale** **(** :ref:`bool<class_bool>` update_remote_scale **)**
 
 .. _class_RemoteTransform_set_use_global_coordinates:
 
-- void  **set_use_global_coordinates**  **(** :ref:`bool<class_bool>` use_global_coordinates  **)**
+- void **set_use_global_coordinates** **(** :ref:`bool<class_bool>` use_global_coordinates **)**
 
 

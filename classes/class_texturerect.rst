@@ -19,26 +19,35 @@ Draws a sprite or a texture inside a User Interface. The texture can tile or not
 Member Functions
 ----------------
 
-+--------------------------------+--------------------------------------------------------------------------------------------------------------+
-| :ref:`int<class_int>`          | :ref:`get_stretch_mode<class_TextureRect_get_stretch_mode>`  **(** **)** const                               |
-+--------------------------------+--------------------------------------------------------------------------------------------------------------+
-| :ref:`Texture<class_texture>`  | :ref:`get_texture<class_TextureRect_get_texture>`  **(** **)** const                                         |
-+--------------------------------+--------------------------------------------------------------------------------------------------------------+
-| :ref:`bool<class_bool>`        | :ref:`has_expand<class_TextureRect_has_expand>`  **(** **)** const                                           |
-+--------------------------------+--------------------------------------------------------------------------------------------------------------+
-| void                           | :ref:`set_expand<class_TextureRect_set_expand>`  **(** :ref:`bool<class_bool>` enable  **)**                 |
-+--------------------------------+--------------------------------------------------------------------------------------------------------------+
-| void                           | :ref:`set_stretch_mode<class_TextureRect_set_stretch_mode>`  **(** :ref:`int<class_int>` stretch_mode  **)** |
-+--------------------------------+--------------------------------------------------------------------------------------------------------------+
-| void                           | :ref:`set_texture<class_TextureRect_set_texture>`  **(** :ref:`Texture<class_texture>` texture  **)**        |
-+--------------------------------+--------------------------------------------------------------------------------------------------------------+
++--------------------------------+------------------------------------------------------------------------------------------------------------+
+| :ref:`int<class_int>`          | :ref:`get_stretch_mode<class_TextureRect_get_stretch_mode>` **(** **)** const                              |
++--------------------------------+------------------------------------------------------------------------------------------------------------+
+| :ref:`Texture<class_texture>`  | :ref:`get_texture<class_TextureRect_get_texture>` **(** **)** const                                        |
++--------------------------------+------------------------------------------------------------------------------------------------------------+
+| :ref:`bool<class_bool>`        | :ref:`has_expand<class_TextureRect_has_expand>` **(** **)** const                                          |
++--------------------------------+------------------------------------------------------------------------------------------------------------+
+| void                           | :ref:`set_expand<class_TextureRect_set_expand>` **(** :ref:`bool<class_bool>` enable **)**                 |
++--------------------------------+------------------------------------------------------------------------------------------------------------+
+| void                           | :ref:`set_stretch_mode<class_TextureRect_set_stretch_mode>` **(** :ref:`int<class_int>` stretch_mode **)** |
++--------------------------------+------------------------------------------------------------------------------------------------------------+
+| void                           | :ref:`set_texture<class_TextureRect_set_texture>` **(** :ref:`Texture<class_texture>` texture **)**        |
++--------------------------------+------------------------------------------------------------------------------------------------------------+
 
 Member Variables
 ----------------
 
-- :ref:`bool<class_bool>` **expand** - If [code]true[/code], the texture scales to fit its bounding rectangle. Default value: [code]false[/code].
-- :ref:`int<class_int>` **stretch_mode** - Controls the texture's behavior when you resize the node's bounding rectangle. Set it to one of the [code]STRETCH_*[/code] constants. See the constants to learn more.
-- :ref:`Texture<class_texture>` **texture** - The node's [Texture] resource.
+  .. _class_TextureRect_expand:
+
+- :ref:`bool<class_bool>` **expand** - If ``true``, the texture scales to fit its bounding rectangle. Default value: ``false``.
+
+  .. _class_TextureRect_stretch_mode:
+
+- :ref:`int<class_int>` **stretch_mode** - Controls the texture's behavior when you resize the node's bounding rectangle. Set it to one of the ``STRETCH\_\*`` constants. See the constants to learn more.
+
+  .. _class_TextureRect_texture:
+
+- :ref:`Texture<class_texture>` **texture** - The node's :ref:`Texture<class_texture>` resource.
+
 
 Numeric Constants
 -----------------
@@ -62,26 +71,26 @@ Member Function Description
 
 .. _class_TextureRect_get_stretch_mode:
 
-- :ref:`int<class_int>`  **get_stretch_mode**  **(** **)** const
+- :ref:`int<class_int>` **get_stretch_mode** **(** **)** const
 
 .. _class_TextureRect_get_texture:
 
-- :ref:`Texture<class_texture>`  **get_texture**  **(** **)** const
+- :ref:`Texture<class_texture>` **get_texture** **(** **)** const
 
 .. _class_TextureRect_has_expand:
 
-- :ref:`bool<class_bool>`  **has_expand**  **(** **)** const
+- :ref:`bool<class_bool>` **has_expand** **(** **)** const
 
 .. _class_TextureRect_set_expand:
 
-- void  **set_expand**  **(** :ref:`bool<class_bool>` enable  **)**
+- void **set_expand** **(** :ref:`bool<class_bool>` enable **)**
 
 .. _class_TextureRect_set_stretch_mode:
 
-- void  **set_stretch_mode**  **(** :ref:`int<class_int>` stretch_mode  **)**
+- void **set_stretch_mode** **(** :ref:`int<class_int>` stretch_mode **)**
 
 .. _class_TextureRect_set_texture:
 
-- void  **set_texture**  **(** :ref:`Texture<class_texture>` texture  **)**
+- void **set_texture** **(** :ref:`Texture<class_texture>` texture **)**
 
 

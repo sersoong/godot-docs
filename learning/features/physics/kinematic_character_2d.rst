@@ -44,7 +44,7 @@ Basically, the oldschool way of handling collisions (which is not
 necessarily simpler under the hood, but well hidden and presented as a
 nice and simple API).
 
-Fixed process
+Physics process
 ~~~~~~~~~~~~~
 
 To manage the logic of a kinematic body or character, it is always
@@ -61,23 +61,20 @@ or lose precision if the frame rate is too high or too low.
     func _physics_process(delta):
         pass
 
-    func _ready():
-        set_physics_process(true)
-
 Scene setup
 ~~~~~~~~~~~
 
 To have something to test, here's the scene (from the tilemap tutorial):
-:download:`kbscene.zip </files/kbscene.zip>`. We'll be creating a new scene
+:download:`kbscene.zip <files/kbscene.zip>`. We'll be creating a new scene
 for the character. Use the robot sprite and create a scene like this:
 
-.. image:: /img/kbscene.png
+.. image:: img/kbscene.png
 
 Let's add a circular collision shape to the collision body, create a new
 CircleShape2D in the shape property of CollisionShape2D. Set the radius
 to 30:
 
-.. image:: /img/kbradius.png
+.. image:: img/kbradius.png
 
 **Note: As mentioned before in the physics tutorial, the physics engine
 can't handle scale on most types of shapes (only collision polygons,
@@ -92,7 +89,7 @@ above should work as a base.
 Finally, instance that character scene in the tilemap, and make the
 map scene the main one, so it runs when pressing play.
 
-.. image:: /img/kbinstance.png
+.. image:: img/kbinstance.png
 
 Moving the Kinematic character
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -113,9 +110,6 @@ So, let's move our sprite downwards until it hits the floor:
     func _physics_process(delta):
         move( Vector2(0,1) ) #move down 1 pixel per physics frame
 
-    func _ready():
-        set_physics_process(true)
-
 The result is that the character will move, but stop right when
 hitting the floor. Pretty cool, huh?
 
@@ -135,9 +129,6 @@ little more like an actual game character:
 
         var motion = velocity * delta
         move( motion )
-
-    func _ready():
-        set_physics_process(true)
 
 Now the character falls smoothly. Let's make it walk to the sides, left
 and right when touching the directional keys. Remember that the values
@@ -168,9 +159,6 @@ This adds simple walking support by pressing left and right:
         var motion = velocity * delta
         move(motion)
 
-    func _ready():
-        set_physics_process(true)
-
 And give it a try.
 
 Problem?
@@ -185,7 +173,7 @@ simple in reality. If the motion can't be completed, the character will
 stop moving. It's as simple as that. This diagram should illustrate
 better what is going on:
 
-.. image:: /img/motion_diagram.png
+.. image:: img/motion_diagram.png
 
 Basically, the desired motion vector will never complete because it hits
 the floor and the wall too early in the motion trajectory and that makes
@@ -203,7 +191,7 @@ normal. KinematicBody2D provides two useful functions:
 
 So what we want to do is this:
 
-.. image:: /img/motion_reflect.png
+.. image:: img/motion_reflect.png
 
 When colliding, the function ``move()`` returns the "remainder" of the
 motion vector. That means, if the motion vector is 40 pixels, but
@@ -233,10 +221,6 @@ this way:
             motion = n.slide(motion)
             velocity = n.slide(velocity)
             move(motion)
-
-
-    func _ready():
-        set_physics_process(true)
 
 Note that not only the motion has been modified but also the velocity.
 This makes sense as it helps keep the new direction too.

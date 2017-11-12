@@ -14,44 +14,72 @@ VisualScriptConstructor
 Brief Description
 -----------------
 
-
+A Visual Script node which calls a base type constructor.
 
 Member Functions
 ----------------
 
-+--------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`Dictionary<class_dictionary>`  | :ref:`get_constructor<class_VisualScriptConstructor_get_constructor>`  **(** **)** const                                            |
-+--------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`int<class_int>`                | :ref:`get_constructor_type<class_VisualScriptConstructor_get_constructor_type>`  **(** **)** const                                  |
-+--------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
-| void                                 | :ref:`set_constructor<class_VisualScriptConstructor_set_constructor>`  **(** :ref:`Dictionary<class_dictionary>` constructor  **)** |
-+--------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
-| void                                 | :ref:`set_constructor_type<class_VisualScriptConstructor_set_constructor_type>`  **(** :ref:`int<class_int>` type  **)**            |
-+--------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`Dictionary<class_dictionary>`  | :ref:`get_constructor<class_VisualScriptConstructor_get_constructor>` **(** **)** const                                           |
++--------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`int<class_int>`                | :ref:`get_constructor_type<class_VisualScriptConstructor_get_constructor_type>` **(** **)** const                                 |
++--------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| void                                 | :ref:`set_constructor<class_VisualScriptConstructor_set_constructor>` **(** :ref:`Dictionary<class_dictionary>` constructor **)** |
++--------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| void                                 | :ref:`set_constructor_type<class_VisualScriptConstructor_set_constructor_type>` **(** :ref:`int<class_int>` type **)**            |
++--------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
 
 Member Variables
 ----------------
 
-- :ref:`Dictionary<class_dictionary>` **constructor**
-- :ref:`int<class_int>` **type**
+  .. _class_VisualScriptConstructor_constructor:
+
+- :ref:`Dictionary<class_dictionary>` **constructor** - The constructor function's method info. Has roughly the following structure:
+
+::
+
+    {
+    name = "string",
+    args = [{
+        name = "string"
+        class_name = "string"
+        type = TYPE\_\*
+        hint = PROPERTY_HINT\_\*
+        hint_string = "string"
+    }]
+    default_args = [] # Array of variants
+    flags = METHOD_FLAG\_\*
+    id = 0
+    return = {type = TYPE\_\*}
+    }
+
+  .. _class_VisualScriptConstructor_type:
+
+- :ref:`int<class_int>` **type** - The type to be constructed.
+
+
+Description
+-----------
+
+A Visual Script node which calls a base type constructor. It can be used for type conversion as well.
 
 Member Function Description
 ---------------------------
 
 .. _class_VisualScriptConstructor_get_constructor:
 
-- :ref:`Dictionary<class_dictionary>`  **get_constructor**  **(** **)** const
+- :ref:`Dictionary<class_dictionary>` **get_constructor** **(** **)** const
 
 .. _class_VisualScriptConstructor_get_constructor_type:
 
-- :ref:`int<class_int>`  **get_constructor_type**  **(** **)** const
+- :ref:`int<class_int>` **get_constructor_type** **(** **)** const
 
 .. _class_VisualScriptConstructor_set_constructor:
 
-- void  **set_constructor**  **(** :ref:`Dictionary<class_dictionary>` constructor  **)**
+- void **set_constructor** **(** :ref:`Dictionary<class_dictionary>` constructor **)**
 
 .. _class_VisualScriptConstructor_set_constructor_type:
 
-- void  **set_constructor_type**  **(** :ref:`int<class_int>` type  **)**
+- void **set_constructor_type** **(** :ref:`int<class_int>` type **)**
 
 

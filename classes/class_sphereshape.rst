@@ -14,31 +14,39 @@ SphereShape
 Brief Description
 -----------------
 
-
+Sphere shape for 3D collisions.
 
 Member Functions
 ----------------
 
-+----------------------------+------------------------------------------------------------------------------------------------+
-| :ref:`float<class_float>`  | :ref:`get_radius<class_SphereShape_get_radius>`  **(** **)** const                             |
-+----------------------------+------------------------------------------------------------------------------------------------+
-| void                       | :ref:`set_radius<class_SphereShape_set_radius>`  **(** :ref:`float<class_float>` radius  **)** |
-+----------------------------+------------------------------------------------------------------------------------------------+
++----------------------------+----------------------------------------------------------------------------------------------+
+| :ref:`float<class_float>`  | :ref:`get_radius<class_SphereShape_get_radius>` **(** **)** const                            |
++----------------------------+----------------------------------------------------------------------------------------------+
+| void                       | :ref:`set_radius<class_SphereShape_set_radius>` **(** :ref:`float<class_float>` radius **)** |
++----------------------------+----------------------------------------------------------------------------------------------+
 
 Member Variables
 ----------------
 
-- :ref:`float<class_float>` **radius**
+  .. _class_SphereShape_radius:
+
+- :ref:`float<class_float>` **radius** - The sphere's radius. The shape's diameter is double the radius.
+
+
+Description
+-----------
+
+Sphere shape for 3D collisions, which can be set into a :ref:`PhysicsBody<class_physicsbody>` or :ref:`Area<class_area>`. This shape is useful for modeling sphere-like 3D objects.
 
 Member Function Description
 ---------------------------
 
 .. _class_SphereShape_get_radius:
 
-- :ref:`float<class_float>`  **get_radius**  **(** **)** const
+- :ref:`float<class_float>` **get_radius** **(** **)** const
 
 .. _class_SphereShape_set_radius:
 
-- void  **set_radius**  **(** :ref:`float<class_float>` radius  **)**
+- void **set_radius** **(** :ref:`float<class_float>` radius **)**
 
 

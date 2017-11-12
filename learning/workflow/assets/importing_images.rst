@@ -1,7 +1,7 @@
 .. _doc_import_images:
 
 Importing Images
-==============
+================
 
 Why importing them?
 -------------------
@@ -22,7 +22,7 @@ efficient.
 
 Import options are vast:
 
-.. image:: /img/image_import1.png
+.. image:: img/image_import1.png
 
 Compression:
 -------------
@@ -34,11 +34,11 @@ Compress Mode
 ~~~~~~~~~~~~~
 
 * VRAM Compression: This is the most common copression mode for 3D assets. File on disk is reduced and
-video memory usage is also reduced considerably. For 3D, it may present unwanted arctifacts, though.
+  video memory usage is also reduced considerably. For 3D, it may present unwanted arctifacts, though.
 * Lossless Compression: This is the most common compression for 2D assets. It shows assets without any
-kind of arctifacting, and disk compression is decent. It will use considerably more amount of video memory than VRAM, though.
+  kind of arctifacting, and disk compression is decent. It will use considerably more amount of video memory than VRAM, though.
 * Lossy Compression: For games with lots of large 2D assets, lossy compression can be a great choice. It has some arctifacting,
-but less than VRAM and the file size is almost a tenth of Lossless.
+  but less than VRAM and the file size is almost a tenth of Lossless.
 * Uncompressed: Only useful for formats that can't be compressed (like, raw float).
 
 In this table, each of the four options are described together with their
@@ -60,6 +60,11 @@ advantages and disadvantages ( |good| = Best, |bad| =Worst ):
 | Load Time      | |regular| Normal       | |bad| Slow                | |bad| Slow              | |good| Fast                                          |
 +----------------+------------------------+---------------------------+-------------------------+------------------------------------------------------+
 
+.. |bad| image:: img/bad.png
+
+.. |good| image:: img/good.png
+
+.. |regular| image:: img/regular.png
 
 HDR Mode
 ~~~~~~~~
@@ -129,7 +134,7 @@ Fix Alpha Border
 This puts pixels of the same surrounding color in transition from transparency to non transparency. It helps mitigate the outline effect when exporting images
 from Photoshop and the likes.
 
-.. image:: /img/fixedborder.png
+.. image:: img/fixedborder.png
 
 It's a good idea to leave it on by default, unless specific values are needed.
 
@@ -150,7 +155,3 @@ Detect 3D
 
 This option makes Godot be aware of when a texture (which is imported for 2D as default) is used in 3D. If this happens, setting are changed so the texture flags
 are friendlier to 3D (mipmaps, filter and repeat become enabled and compression is changed to VRAM). Texture is also reimported automaticlaly.
-
-
-
-
